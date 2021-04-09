@@ -31,7 +31,7 @@ export default function NavSlider() {
 						navData.map(item => {
 							return (
 								<Link key={uuid()} to={item.path}>
-									<li className={item.class}>
+									<li className={item.class} onClick={handleClick}>
 										{item.name}
 									</li>
 								</Link>

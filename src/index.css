@@ -223,6 +223,7 @@ code {
 	
 	header {
 		height: 100px;
+		left: 50
 	}
 	.site-heading {
 		font-size: 3rem;
@@ -230,6 +231,12 @@ code {
 	}
 		.site-sub {
 		font-size: 1.5rem;
+	}
+
+	main {
+		width: 90%;
+		margin: 0 1rem;
+		padding: 0 1rem;
 	}
 
 }
