@@ -1,3 +1,4 @@
+![30-301908_gold-stars-png](https://user-images.githubusercontent.com/26289436/114234513-dc72b000-994c-11eb-94c4-f7a9c6eebcf3.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
