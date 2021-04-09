@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-just-give-me-space/static/css/main.cfa8886f.chunk.css",
-    "main.js": "/react-just-give-me-space/static/js/main.f07a00ab.chunk.js",
-    "main.js.map": "/react-just-give-me-space/static/js/main.f07a00ab.chunk.js.map",
+    "main.css": "/react-just-give-me-space/static/css/main.bc24ef15.chunk.css",
+    "main.js": "/react-just-give-me-space/static/js/main.1641c718.chunk.js",
+    "main.js.map": "/react-just-give-me-space/static/js/main.1641c718.chunk.js.map",
     "runtime-main.js": "/react-just-give-me-space/static/js/runtime-main.bc0ccf94.js",
     "runtime-main.js.map": "/react-just-give-me-space/static/js/runtime-main.bc0ccf94.js.map",
     "static/js/2.0f6bee9e.chunk.js": "/react-just-give-me-space/static/js/2.0f6bee9e.chunk.js",
     "static/js/2.0f6bee9e.chunk.js.map": "/react-just-give-me-space/static/js/2.0f6bee9e.chunk.js.map",
     "index.html": "/react-just-give-me-space/index.html",
-    "static/css/main.cfa8886f.chunk.css.map": "/react-just-give-me-space/static/css/main.cfa8886f.chunk.css.map",
+    "static/css/main.bc24ef15.chunk.css.map": "/react-just-give-me-space/static/css/main.bc24ef15.chunk.css.map",
     "static/js/2.0f6bee9e.chunk.js.LICENSE.txt": "/react-just-give-me-space/static/js/2.0f6bee9e.chunk.js.LICENSE.txt",
     "static/media/falcon9.d4a91d7b.png": "/react-just-give-me-space/static/media/falcon9.d4a91d7b.png",
     "static/media/header-bkg.be71d84a.jpeg": "/react-just-give-me-space/static/media/header-bkg.be71d84a.jpeg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.bc0ccf94.js",
     "static/js/2.0f6bee9e.chunk.js",
-    "static/css/main.cfa8886f.chunk.css",
-    "static/js/main.f07a00ab.chunk.js"
+    "static/css/main.bc24ef15.chunk.css",
+    "static/js/main.1641c718.chunk.js"
   ]
 }
