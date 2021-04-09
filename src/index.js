@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom'
-import NavBar from './Components/NavBar/NavBar'
-import headerBkg from './images/header-bkg.jpeg'
-
-
 import './index.css';
 import App from './App';
 
@@ -19,7 +15,6 @@ ReactDOM.render(
 					</div>
 				</div>
 			</header>
-			<NavBar />
 			<App />
 		</Router>
 	</React.StrictMode>,

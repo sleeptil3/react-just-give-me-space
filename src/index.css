@@ -59,9 +59,28 @@ p {
 	padding: 1rem 0;
 }
 
+/* @keyframes starfield {
+	from {background-position: bottom left;}
+	to	{background-position: top right;}
+}
+@keyframes moveInHeader {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+} */
+
+@keyframes starfield {
+	0% {
+		transform: translateY(-100%);
+		background-position: bottom left;
+	}
+	.3% {transform: translateY(0);}
+	100% {background-position: top right;}
+}
+
 header {
-	background-image: url(./images/header-bkg2.jpeg);
-	background-position: left;
+	background-image: url(./images/header-bkg.jpeg);
+	background-position: bottom left;
+	animation: starfield 240s linear both infinite;
 	position: fixed;
 	top: 0;
 	height: 150px;
@@ -69,7 +88,6 @@ header {
 	margin: 0 auto;
 	padding-left: 6rem;
 	border-bottom: 1px solid ghostwhite;
-	animation: moveInHeader 1s;
 	z-index: 0;
 }
 

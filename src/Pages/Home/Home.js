@@ -18,13 +18,9 @@ export default function Home({ apodData }) {
 				<p>
 					Welcome to JUST GIVE ME SPACE, a website for space nerds. Feel free to explore using the spaceship navigation on the right. You'll find a a dark sky forecast page that will display the viewing conditions in your chosen locale, a SpaceX information page, a gallery of astronomy pictures, and a collection of films that revolve around space themes, 'orbit' pun intended.
 				</p>
-				<br />
-				<br />
 				<p>
 					I hope you enjoy the content on this website. May you always find dark skies and a big telescope waiting.
 				</p>
-				<br />
-				<br />
 				<p>
 					<span className='heavy'>-Shawn</span>
 				</p>

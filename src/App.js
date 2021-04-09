@@ -5,6 +5,7 @@ import ApodGallery from './Pages/ApodGallery/ApodGallery'
 import SpaceX from './Pages/SpaceX/SpaceX'
 import DarkSkies from './Pages/DarkSkies/DarkSkies'
 import FilmAndTv from './Pages/FilmAndTv/FilmAndTv'
+import NavSlider from './Components/NavSlider/NavSlider'
 import { start_date, year } from './Data/GeneralData'
 import { CgCopyright } from "react-icons/cg";
 import './App.css'
@@ -33,6 +34,7 @@ export default function App() {
 	return (
 		<div className="App">
 			<main>
+				<NavSlider />
 				<Switch>
 					<Route path='/' exact render={(routerProps) => <Home {...routerProps} apodData={apodData} />} />
 					<Route path='/apodgallery' exact render={(routerProps) => <ApodGallery {...routerProps} apodData={apodData} />} />
