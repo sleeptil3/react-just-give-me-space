@@ -19,7 +19,7 @@ export default function UpcomingLaunches() {
 
 	if (!upcomingLaunches || upcomingLaunches.length > 0) {
 		return (
-			<div className='UpcomingLaunches'>
+			<div className='UpcomingLaunches fadeIn'>
 				<h1>Upcoming Launches</h1>
 				{upcomingLaunches ? upcomingLaunches.map(launch => {
 					return (

@@ -9,7 +9,7 @@ export default function ApodModal(props) {
 		return null
 	} else {
 		return (
-			<div className='ApodModal center' >
+			<div className='ApodModal center fadeIn' >
 				<div className='modal-title-div' onClick={props.handleClick}>
 					<FaWindowClose className='close' />
 					<h1>{props.data.title}</h1>

@@ -33,8 +33,9 @@ export default function DarkSkies(props) {
 
 	const getSkyConditions = async (lat, long) => {
 		try {
-			const res = await fetch(`https://www.7timer.info/bin/api.pl?lon=${long}&lat=${lat}&product=astro&output=json`)
+			const res = await fetch(`https://www.7timer.info/bin/astro.php?lon=${long}&lat=${lat}&ac=0&unit=british&output=json&tzshift=0`)
 			const data = await res.json()
+			console.log(data)
 			setSkyData(data.dataseries[0])
 			setRenderSkyStats(true)
 			console.log(data)
@@ -48,7 +49,7 @@ export default function DarkSkies(props) {
 
 
 	return (
-		<div className='DarkSkies'>
+		<div className='DarkSkies fadeIn'>
 			<div>
 				<h1>DarkSkies</h1>
 				<p>You can use this utility to check the astronomy forcast for your location! Be sure to allow location sharing when it pops up for it to work properly.</p>

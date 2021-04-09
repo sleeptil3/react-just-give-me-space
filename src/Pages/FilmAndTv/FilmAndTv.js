@@ -5,7 +5,7 @@ import './filmandtv.css'
 
 export default function FilmAndTv() {
 	return (
-		<div className='FilmAndTv'>
+		<div className='FilmAndTv fadeIn'>
 			<h1>Space-related Film and TV</h1>
 			<p>Below find a small collection of amazing films and television shows that feature space as the main theme.</p>
 			<p><span className='light'>Data Provided by </span><b>OMDb</b></p>

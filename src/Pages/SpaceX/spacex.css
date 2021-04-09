@@ -74,8 +74,8 @@ select {
 }
 
 .youtube {
-	width: 62.2vw;
-	height: 35vw;
+	width: 50vw;
+	height: 28.2vw;
 }
 
 @keyframes liftOff {

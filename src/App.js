@@ -9,9 +9,7 @@ import { start_date, year } from './Data/GeneralData'
 import { CgCopyright } from "react-icons/cg";
 import './App.css'
 
-//logic to get date 30 days ago in correct format for API
-
-function App() {
+export default function App() {
 	const [apodData, setApodData] = useState([])
 
 	const getApodData = async () => {
@@ -32,12 +30,8 @@ function App() {
 		getApodData()
 	}, [])
 
-	// if (!apodData.length) {
-	// 	return <img className='main-loading center' src={loading} alt='Loading Website...' />
-	// } else {
 	return (
 		<div className="App">
-
 			<main>
 				<Switch>
 					<Route path='/' exact render={(routerProps) => <Home {...routerProps} apodData={apodData} />} />
@@ -50,9 +44,6 @@ function App() {
 			<footer className='fadeInPause'>
 				{apodData.length > 1 ? <p className='footer-p'>Web Design <CgCopyright className='copyright' />{year} • Shawn Clary • Sleeptil3Software</p> : ''}
 			</footer>
-		</div >
+		</div>
 	)
 }
-// }
-
-export default App;

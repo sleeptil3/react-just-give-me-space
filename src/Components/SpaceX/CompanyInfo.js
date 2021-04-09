@@ -17,7 +17,7 @@ export default function CompanyInfo() {
 
 	if (companyInfo !== undefined) {
 		return (
-			<div className='CompanyInfo'>
+			<div className='CompanyInfo fadeIn'>
 				<h1>Company Info</h1>
 				<h2>Video</h2>
 				<div className='youtube'>

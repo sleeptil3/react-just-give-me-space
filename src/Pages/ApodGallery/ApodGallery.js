@@ -20,7 +20,7 @@ export default function ApodGallery({ apodData }) {
 	}
 
 	return (
-		<div className='ApodGallery'>
+		<div className='ApodGallery fadeIn'>
 			<h1>Astronomy Picture of the Day Gallery</h1><br />
 			<p><span className='light'>Data Provided by </span><b>NASA</b></p>
 			<div className="apod-flex">

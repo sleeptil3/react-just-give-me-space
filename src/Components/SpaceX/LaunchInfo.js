@@ -13,7 +13,7 @@ export default function LaunchInfo({ data }) {
 		if (launchDate) {
 			console.log(data)
 			return (
-				<div className='launch-div'>
+				<div className='launch-div fadeIn'>
 					{data.links.patch.small ? <img className='patch' src={data.links.patch.small} alt={`patch for mission ${data.name}`} /> : <img className='patch' src={spaceXBadge} alt={`spaceX logo substitute for missing mission patch`} />}
 					<div className='launch-info'>
 						<h2>{data.name}</h2>

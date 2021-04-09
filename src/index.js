@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import NavBar from './Components/NavBar/NavBar'
 import headerBkg from './images/header-bkg.jpeg'
 
@@ -11,7 +11,7 @@ import App from './App';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<header style={{ backgroundImage: `url(${headerBkg})` }}>
+			<header>
 				<div className='header-div'>
 					<div>
 						<h1 className='site-heading'>just give me <span className='space'>SPACE</span></h1>
