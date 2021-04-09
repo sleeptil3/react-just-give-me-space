@@ -1,13 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Poppins:wght@200&display=swap');
+
+*,
+*::after,
+*::before {
+	margin:0;
+	padding:0;
+   box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	/* width: 100vw; */
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Oswald', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	max-width: 99%;
+	margin: 0 auto;
+	background-color: black;
+	color: rgb(233, 233, 233);
+	/* overflow-x: hidden; */
+	/* border: 1px solid blue; */
+}
+body::before {    
+	content: "";
+	background-image: url('./images/stars.jpg');
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.1;
+	animation: fadeIn2 3s;
+	z-index: -1;
+}
+
+
+main {
+	margin: 30px 150px;
+	min-height: calc(100vh - 350px);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+h1 {
+	font-size: 3rem;
+	line-height: 4rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+		line-height: 3.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
+.accent-color {
+	color: blue;
+}
+
+.light {
+	font-weight: lighter;
+}
+
+.heavy {
+	font-weight: bold;
+}
+
+.blue {
+	color: blue;
+}
+
+.offwhite {
+	color: rgb(233, 233, 233)
+}
+/* CENTER THINGS */
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.button-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem;
+}
+
+.button {
+	background-color: blue;
+	display: inline-block;
+	outline: none;
+	border: none;
+	transition: transform .1s linear;
+	cursor: pointer;
+	color:ghostwhite;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+}
+
+.button:hover {
+  color: blue;
+  background-color: rgb(165, 165, 165);
+}
+.button:active {
+	transform: scale(.95)
+}
+
+.link {
+	font-size: 1.4rem;
+	text-decoration: none;
+	color: ghostwhite;
+}
+
+.link:visited {
+	color: white;
+}
+
+/* @media screen and (min-width: 1500px) {
+	body {
+		max-width: 70%;
+	} 
+} */

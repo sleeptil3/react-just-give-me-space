@@ -1,0 +1,14 @@
+.FilmAndTv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	padding-top: 150px;
+}
+.FilmAndTv h1 {
+	/* align-self: center; */
+}
+.films-div {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}

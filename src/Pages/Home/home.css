@@ -1,0 +1,60 @@
+.Home {
+	margin-top: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+.Home h1 {
+	padding-top: 40px;	
+}
+
+.Home h2 {
+	padding: 10px 0;
+}
+
+.apod-link:visited {
+	color: ghostwhite;
+}
+
+.apod-link p {
+	display: block;
+}
+
+.apod-link:hover {
+	color: blue;
+}
+
+.main-loading {
+	width: 70px;
+}
+
+
+.quote {
+	position: relative;
+	top: 8px;
+	z-index: -1;
+		padding: 0 100px;
+}
+
+.quote-icon {
+	position: inline-block;
+	margin: 0 1rem;
+}
+
+.apod-div {
+	width: 100%;
+}
+
+.apod-img-div {
+	width: 100%;
+	height: 400px;
+}
+
+.apod-img-div img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+		border: 1px solid ghostwhite;
+}

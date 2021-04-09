@@ -1,0 +1,54 @@
+.ApodModal {
+	width: 80vw;
+	/* height: 70vh; */
+	position: fixed;
+	border: 2px solid blue;
+	background-color: black;
+	z-index: 1;
+}
+
+.ApodModal h1 {
+	padding: 3rem;
+}
+
+.ApodModal img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.ApodModal p {
+	padding: 3rem;
+}
+
+.ApodModal h3 {
+	padding-left: 3rem;
+	padding-bottom: 3rem;
+}
+
+#download {
+	color:ghostwhite;
+	text-decoration: none;
+}
+
+#download:hover {
+	color: blue;
+}
+
+.close {
+	width: 50px;
+	height: 50px;
+	/* background-color: blue; */
+	font-size: 4rem;
+	border-radius: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+.close:hover {
+	color: blue;
+}
