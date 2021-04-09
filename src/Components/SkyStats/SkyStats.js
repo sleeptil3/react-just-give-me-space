@@ -20,7 +20,7 @@ export default function SkyStats({ lat, long, renderSkyStats, skyData }) {
 						<h4>Atmosphere Transparency <span className='light'>(lower is better)</span>: {skyData.transparency}</h4>
 					</div>
 				</div>
-				<img className='fadeIn' src={`http://www.7timer.info/bin/astro.php?lon=${long}&lat=${lat}ac=0&lang=en&unit=british&output=internal&tzshift=0`} alt='png graphic showing astro conditions in detail' />
+				<img className='fadeIn' src={`https://www.7timer.info/bin/astro.php?lon=${long}&lat=${lat}ac=0&lang=en&unit=british&output=internal&tzshift=0`} alt='png graphic showing astro conditions in detail' />
 			</div>
 		)
 	}

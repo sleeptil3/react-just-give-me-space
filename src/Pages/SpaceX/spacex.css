@@ -110,7 +110,7 @@ select {
 	width: 100vw;
 	margin-left: -100px;
 	left: 80px;
-	bottom: -200px;
+	bottom: -270px;
 	z-index: 1;
 	pointer-events: none;
 	filter: drop-shadow(0 0 10px black);

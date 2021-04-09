@@ -17,16 +17,17 @@ body {
 	font-family: 'Oswald', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	max-width: 99%;
+	position: relative;
 	margin: 0 auto;
 	background-color: black;
 	color: rgb(233, 233, 233);
+	min-height: 100vh;
 	/* overflow-x: hidden; */
 	/* border: 1px solid blue; */
 }
 body::before {    
 	content: "";
-	background-image: url('./images/stars.jpg');
+	background-image: url('images/stars.jpg');
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -40,7 +41,7 @@ body::before {
 
 main {
 	margin: 30px 150px;
-	min-height: calc(100vh - 350px);
+	min-height: calc(100vh - 175px);
 }
 
 code {
