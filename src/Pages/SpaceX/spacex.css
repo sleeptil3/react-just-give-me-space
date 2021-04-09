@@ -1,19 +1,23 @@
-.get-content  {
-	margin-top: 200px;
+.SpaceX  {
+		margin: 0 auto;
+
+	margin-top: 170px;
+	margin-right: 100px;
 }
 
-.get-content-p {
+/* .get-content p {
 	padding-right: 6rem;
 	margin-bottom: 2rem;
-}
+} */
 
 select {
 	outline: none;
 	border: 1px solid ghostwhite;
-	padding: .6rem;
-	margin-bottom: 2rem;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
 	color: ghostwhite;
-	background-color: transparent;
+	background-color: blue;
 }
 
 .CompanyInfo {
@@ -29,7 +33,9 @@ select {
 }
 
 .CompanyInfo p { 
-	padding-right: 5rem;
+	padding-right: 6rem;
+	padding-bottom: 0;
+	padding-top: 0;
 }
 
 .CompanyInfo h2 { 
@@ -41,13 +47,17 @@ select {
 	color: blue;
 }
 
+.UpcomingLaunches { 
+	margin-bottom: 50px;
+}
+.UpcomingLaunches p { 
+	padding: 0;
+}
 
+.UpcomingLaunches h2 { 
+	padding: 0;
+}
 .launches-div {
-	/* display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-content: center;
-	justify-items: start; */
-	height: 100%;
 	padding: 2rem 3rem;
 }
 
@@ -62,10 +72,7 @@ select {
 	width: 100px;
 	float: left;
 }
-.default-patch {
-	width: 100px;
-	float: left;
-}
+
 .youtube {
 	width: 62.2vw;
 	height: 35vw;
@@ -105,15 +112,74 @@ select {
 	100% {transform: translate(0, 0)}
 }
 
-.falcon {
+.falcon-div {
 	position: fixed;
-	width: 100vw;
-	margin-left: -100px;
-	left: 80px;
-	bottom: -270px;
-	z-index: 1;
+	bottom: 500px;
+	/* top: 0; */
+	left:0;
+	right: 0;
+	height: 100vw;
+ 	/* background-image: url(../../images/falcon9.png); */
+	background-position: bottom right;
+	background-size: cover;
 	pointer-events: none;
 	filter: drop-shadow(0 0 10px black);
 	animation: liftOff 4s ease-out;
+	z-index: 1;
+
+}
+
+.falcon {
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	
+	.SpaceX {
+		margin-top: 110px;
+	}
+	select {
+		background: none;
+	}	
+	.falcon-div {
+		bottom: 250px;
+	}
+	.CompanyInfo p { 
+	padding-right: 0;
+	}
+	.CompanyInfo h1{ 
+		padding-bottom: 1rem;
+	}
+	.CompanyInfo h2{ 
+		padding-top: 1rem;
+	}
+	.UpcomingLaunches h1 {
+		font-size:6vw;
+	}
+	.UpcomingLaunches h2 {
+		font-size: 4vw;
+	}
+	.patch {
+		margin-top: 2rem;
+		margin-bottom: -1rem;
+		width: 50px;
+		float: none;
+	}
+.launches-div {
+	padding: 0;
+	margin: 0;
+}
+.launch-info {
+	margin-left: 0;
+}
+
+.launch-info h2 {
+	margin-bottom: -1rem;
+}
+
+.launch-info p {
+	font-size: 2.5vw;
+	margin-bottom: -1rem;
+}
 }
 

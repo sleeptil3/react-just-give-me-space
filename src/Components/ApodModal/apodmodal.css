@@ -1,10 +1,12 @@
 .ApodModal {
 	width: 80vw;
+	max-height: 95vh;
 	/* height: 70vh; */
 	position: fixed;
-	border: 2px solid blue;
+	border: 2px solid ghostwhite;
 	background-color: black;
-	z-index: 1;
+		overflow-y:auto;
+
 }
 
 .ApodModal h1 {
@@ -18,6 +20,7 @@
 }
 
 .ApodModal p {
+	font-size: 1.4rem;
 	padding: 3rem;
 }
 
@@ -35,20 +38,50 @@
 	color: blue;
 }
 
-.close {
-	width: 50px;
-	height: 50px;
+.modal-title-div {
 	/* background-color: blue; */
 	font-size: 4rem;
 	border-radius: 10%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	cursor: pointer;
+	/* position: absolute; */
+	/* right: 20px;
+	top: 20px; */
 }
+
+.close {
+	color: ghostwhite;
+	cursor: pointer;
+	margin-left: 40px;
+}
+
 .close:hover {
 	color: blue;
+}
+
+@media screen and (max-width: 600px) {
+
+	.ApodModal {
+		max-height: 70vh;
+		width: 99vw;
+		border: 1px solid ghostwhite;
+
+	}
+	
+	.ApodModal img {
+		max-height: 20vh;
+	}
+	.ApodModal p {
+		margin: 2rem;
+	}
+	.modal-title-div h1 {
+		font-size: 5vw;
+		margin-left: 0;
+		padding: 2rem 1.5rem;
+	}
+	.close {
+	font-size: 3rem;
+	margin-left: 20px;
+	}
 }

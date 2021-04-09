@@ -12,7 +12,7 @@ export default function NavBar() {
 		setRotateToggle(!rotateToggle)
 	}
 	return (
-		<nav>
+		<nav className='NavBar'>
 			<div className='nav-item-toggle-div'>
 				<div className='nav-toggle' onClick={handleClick}>
 					<FaSpaceShuttle className={rotateToggle ? 'nav-toggle-icon rotate' : 'nav-toggle-icon'} />

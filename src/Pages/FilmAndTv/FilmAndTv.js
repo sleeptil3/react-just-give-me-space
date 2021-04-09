@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import FilmTile from '../../Components/FilmTile/FilmTile'
-import './filmandtv.css'
 import { films } from '../../Data/GeneralData'
+import './filmandtv.css'
 
 export default function FilmAndTv() {
 	return (

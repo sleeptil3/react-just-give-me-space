@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: 150px;
+	margin-top: 170px;
 }
 .FilmAndTv > h1 {
 	align-self: flex-start;
@@ -14,4 +14,27 @@
 .films-div {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+}
+#tv-home {
+	align-self: center;
+}
+
+@media screen and (max-width: 1160px) {
+
+	.films-div {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.FilmAndTv {
+		margin-top: 125px;
+	}
+	.films-div {
+		grid-template-columns: 1fr;
+	}
+	.FilmAndTv h1 {
+		font-size: 6vw;
+	}
 }

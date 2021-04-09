@@ -5,11 +5,8 @@ import ApodGallery from './Pages/ApodGallery/ApodGallery'
 import SpaceX from './Pages/SpaceX/SpaceX'
 import DarkSkies from './Pages/DarkSkies/DarkSkies'
 import FilmAndTv from './Pages/FilmAndTv/FilmAndTv'
-import NavBar from './Components/NavBar/NavBar'
 import { start_date, year } from './Data/GeneralData'
 import { CgCopyright } from "react-icons/cg";
-import headerBkg from './images/header-bkg.jpeg'
-import loading from './images/loading.gif'
 import './App.css'
 
 //logic to get date 30 days ago in correct format for API
@@ -31,6 +28,7 @@ function App() {
 	}
 
 	useEffect(() => {
+		window.scrollTo(0, 0)
 		getApodData()
 	}, [])
 
@@ -39,15 +37,7 @@ function App() {
 	// } else {
 	return (
 		<div className="App">
-			<header>
-				<div className='header-div' style={{ backgroundImage: `url(${headerBkg})` }}>
-					<div>
-						<h1 className=''>just give me <span className='space'>SPACE</span></h1>
-						<p className=''>A Website for <span className='nerds'>Space Nerds</span></p>
-					</div>
-				</div>
-				<NavBar />
-			</header>
+
 			<main>
 				<Switch>
 					<Route path='/' exact render={(routerProps) => <Home {...routerProps} apodData={apodData} />} />
@@ -60,7 +50,7 @@ function App() {
 			<footer className='fadeInPause'>
 				{apodData.length > 1 ? <p className='footer-p'>Web Design <CgCopyright className='copyright' />{year} • Shawn Clary • Sleeptil3Software</p> : ''}
 			</footer>
-		</div>
+		</div >
 	)
 }
 // }

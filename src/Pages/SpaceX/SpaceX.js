@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CompanyInfo from '../../Components/SpaceX/CompanyInfo'
 import UpcomingLaunches from '../../Components/SpaceX/UpcomingLaunches'
 import { dropDownData } from '../../Data/GeneralData'
@@ -31,8 +31,13 @@ export default function SpaceX() {
 			default: break
 		}
 	}
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
 	return (
-		<div className='get-content'>
+		<div className='SpaceX'>
 			<div>
 				<h1>SpaceX</h1>
 				<p className='get-content-p'>SpaceX currently leads the world in private space exploration and they are a constant inspiration to me. Here, you'll find info on upcoming launches as well as details on their program.</p>
@@ -45,9 +50,11 @@ export default function SpaceX() {
 					})}
 				</select>
 			</div>
-			<img src={falcon9} alt='falcon 9 dramatically entering screen simulating launch' className='falcon' />
 			{showCompanyInfo ? <CompanyInfo /> : ''}
 			{showUpcomingLaunches ? <UpcomingLaunches /> : ''}
+			<div className='falcon-div'>
+				<img src={falcon9} alt='falcon 9 dramatically entering screen simulating launch' className='falcon' />
+			</div>
 		</div>
 	)
 }

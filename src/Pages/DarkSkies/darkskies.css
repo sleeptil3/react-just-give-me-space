@@ -1,5 +1,5 @@
 .DarkSkies {
-	margin-top: 200px;
+	margin-top: 170px;
 }
 
 .DarkSkies h3{
@@ -25,4 +25,15 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+
+	.DarkSkies {
+		margin-top: 120px;
+	}
+	.DarkSkies p {
+		margin-top: 1rem;
+		padding-top: 0;
+	}
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im"
 import './home.css'
@@ -7,7 +7,7 @@ export default function Home({ apodData }) {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
-	}, [apodData])
+	}, [])
 
 	if (!apodData.length) {
 		return ''
@@ -36,8 +36,7 @@ export default function Home({ apodData }) {
 				<div className='apod-div'>
 					<h1>Astronomy Picture of the Day</h1>
 					<Link to="/apodgallery" className='apod-link'>
-						<p>30 Day History</p>
-						<br />
+						<p>View Gallery</p>
 					</Link>
 					<div className='apod-img-div'>
 						<img src={apodData[apodData.length - 1].url} alt={apodData[apodData.length - 1].title} />

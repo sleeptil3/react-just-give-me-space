@@ -7,7 +7,7 @@ export default function SkyStats({ lat, long, renderSkyStats, skyData }) {
 		return <img className='loading' src={loading} alt='Loading Website...' />
 	} else {
 		return (
-			<div className='conditions fadeIn'>
+			<div className='SkyStats fadeIn'>
 				<div>
 					<div>
 						<h3>Your Location</h3>
@@ -20,7 +20,7 @@ export default function SkyStats({ lat, long, renderSkyStats, skyData }) {
 						<h4>Atmosphere Transparency <span className='light'>(lower is better)</span>: {skyData.transparency}</h4>
 					</div>
 				</div>
-				<img className='fadeIn' src={`https://www.7timer.info/bin/astro.php?lon=${long}&lat=${lat}ac=0&lang=en&unit=british&output=internal&tzshift=0`} alt='png graphic showing astro conditions in detail' />
+				<img className='fadeIn sky-results' src={`https://www.7timer.info/bin/astro.php?lon=${long}&lat=${lat}ac=0&lang=en&unit=british&output=internal&tzshift=0`} alt='png graphic showing astro conditions in detail' />
 			</div>
 		)
 	}

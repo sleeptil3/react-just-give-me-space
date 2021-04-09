@@ -1,11 +1,11 @@
-.conditions {
+.SkyStats {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.conditions > div {
+.SkyStats > div {
 	margin-top: 4rem;
 	display: flex;
 	justify-content: center;
@@ -16,4 +16,25 @@
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+
+	.SkyStats > div {
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-top: 0;
+}
+.SkyStats h3 {
+	font-size: 6vw;
+	padding: 0;
+	padding-top: 2rem;
+}
+.SkyStats h4 {
+	font-size: 4vw;
+	padding: 0;
+}
+	.sky-results{
+		width: 99vw;
+	}
 }

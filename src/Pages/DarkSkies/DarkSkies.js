@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SkyStats from '../../Components/SkyStats/SkyStats'
 import './darkskies.css'
@@ -19,9 +19,21 @@ export default function DarkSkies(props) {
 		});
 	}
 
+	// const getSkyConditions = async (lat, long) => {
+	// 	try {
+	// 		const res = await fetch(`https://shawn-api-thingy.herokuapp.com?lat=${lat}&long=${long}`)
+	// 		const data = await res.json()
+	// 		setSkyData(data.dataseries[0])
+	// 		setRenderSkyStats(true)
+	// 		console.log(data)
+	// 	} catch (err) {
+	// 		console.error(err)
+	// 	}
+	// }
+
 	const getSkyConditions = async (lat, long) => {
 		try {
-			const res = await fetch(`https://shawn-api-thingy.herokuapp.com?lat=${lat}&long=${long}`)
+			const res = await fetch(`https://www.7timer.info/bin/api.pl?lon=${long}&lat=${lat}&product=astro&output=json`)
 			const data = await res.json()
 			setSkyData(data.dataseries[0])
 			setRenderSkyStats(true)
@@ -30,6 +42,10 @@ export default function DarkSkies(props) {
 			console.error(err)
 		}
 	}
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	})
+
 
 	return (
 		<div className='DarkSkies'>
