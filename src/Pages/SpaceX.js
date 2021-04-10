@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import CompanyInfo from '../../Components/SpaceX/CompanyInfo'
-import UpcomingLaunches from '../../Components/SpaceX/UpcomingLaunches'
-import { dropDownData } from '../../Data/GeneralData'
+import CompanyInfo from '../Components/SpaceX/CompanyInfo'
+import UpcomingLaunches from '../Components/SpaceX/UpcomingLaunches'
+import { dropDownData } from '../Data/GeneralData'
 import { v4 as uuid } from 'uuid'
-import falcon9 from '../../images/falcon9.png'
-import './spacex.css'
+import falcon9 from '../images/falcon9.png'
 
 export default function SpaceX() {
 	const [showCompanyInfo, setShowCompanyInfo] = useState(false)

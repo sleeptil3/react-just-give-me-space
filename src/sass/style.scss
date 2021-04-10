@@ -1,0 +1,598 @@
+@import "variables";
+@import "base";
+@import "interface";
+@import "keyFrames";
+@import "transitions";
+@import "mediaQueries";
+@import "classStyles";
+
+////////////////
+// Stylesheet //
+////////////////
+
+header {
+	background-image: url('images/header-bkg.jpeg');
+	background-position: bottom left;
+	animation: starfield 300s linear both;
+	animation-fill-mode: forwards;
+	position: fixed;
+	top: 0;
+	height: 120px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 6rem;
+	border-bottom: 1px solid $color-main;
+	z-index: 0;
+	.header-div {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		max-width: 1200px;
+		height: 100%;
+		margin-left: calc(40vh - 35rem);
+		h1 {
+			font-weight: 200;
+			line-height: 3rem;
+			font-size: 5rem;
+			text-shadow: 4px 2px 4px rgb(0, 0, 0);
+		}
+		.space {
+			text-shadow: 2px 2.5px 40px rgb(255, 255, 255), -2px 1px 0px rgb(255, 255, 255);
+			color: $color-accent;
+			font-weight: 700;
+			letter-spacing: .2vw;
+		}
+		p {
+			font-size: 2rem;
+			font-weight: 400;
+			color: $color-main;
+			text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.527);
+		}
+		.nerds {
+			font-family: $font-headings;
+			font-weight: 700;
+			color: $color-main;
+		}
+	}
+	img {
+		position: absolute;
+		bottom: -19px;
+		// left: calc(40vh - 6rem);
+		left:310px;
+		z-index: -1;
+		width: 160px;
+		filter: drop-shadow( 4px 10px 9px rgba(0, 0, 0, 0.445));
+	}
+}
+@media screen and (max-width: 600px) {
+	header {
+		height: 90px;
+		img {
+			width: 120px;
+			left: unset;
+			bottom: 16px;
+			right: 20px;
+		}
+		.header-div {
+			h1 {
+				font-size: 4rem;
+			}
+			p {
+				font-size: 1.5rem;
+				margin-top: -1rem;
+			}
+		}
+		
+	}
+}
+footer {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem;
+	p {
+		// margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 0px 2px 2px $color-background-default;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.482);
+		padding: .25rem 1rem;
+		border-radius: 50px;
+		z-index: 1;
+		.copyright {
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+.stars {
+	position: fixed;
+	top:0;
+	right:0;
+	background-image: url('images/stars.jpg');
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	animation: starFade 4s linear forwards;
+}
+.App {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	// height: 100vh;
+	.NavSlider {
+		opacity: 0;
+		transition: opacity 1s;
+		.NavSlider-container {
+			position: fixed;
+			z-index: 1000;
+			top: 145px;
+			right: -510px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			border: 1px solid white;
+			border-right: none;
+			transition: right .4s ease-in;
+			background-color: $color-background-default;
+			background-image: url('images/navbar-back.png');
+		}
+		.nav-icon {
+			font-size: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $color-main;
+			position: relative;
+			bottom: 1px;
+			height: 35px;
+			width: 50px;
+			transform: rotate(180deg);
+			cursor: pointer;
+			transition: all 1s .4s;
+		}
+		.rotate {
+			transform: rotate(0);
+			bottom: 0;
+		}
+		ul {
+			list-style: none;
+			font-size: 1.5rem;
+			text-shadow: .5px .5px 2px rgb(0, 0, 0);
+			margin-left: 1rem;
+			margin-right: 1rem;
+			li {
+				display: inline;
+				padding: 0 1.5rem;
+				text-decoration: none;
+			}
+			a, a:visited {
+				color: $color-main;
+				text-decoration: none;
+				font-weight: 600;
+				}
+			a:hover {
+				text-decoration: underline;
+			}
+			a:active {
+				text-decoration: underline;
+			}
+		}
+		.slide-in {
+			right: 0;
+		}
+	}
+	.show {
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 600px) {
+	.App {
+		.NavSlider {
+			opacity: 0;
+			transition: opacity 1s;
+			.NavSlider-container {
+				position: fixed;
+				z-index: 1000;
+				right: 0;
+				border: unset;
+				border-bottom: 1px solid $offwhite;
+				border-top: 1px solid $offwhite;
+
+				// border: unset;
+				width: 100%;
+				height: 3rem;
+				top: 89px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: unset;
+				.nav-icon {
+						display: none;
+				}
+				ul {
+					font-size: 2.5vw;
+					margin-left: .8rem;
+					margin-right: .8rem;
+					li {
+						padding: 2rem .5rem;
+						text-decoration: none;
+						a, a:visited {
+							color: $color-main;
+							text-decoration: none;
+							font-weight: 600;
+						}
+						a:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			.slide-in {
+				right: 0;
+			}
+		}
+		.show {
+			opacity: 1;
+		}
+	}
+}
+.Home {
+	margin: 0 auto;
+	// width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+	font-size: inherit;
+	.quote {
+		padding: 25px 50px;
+		.quote-icon {
+			margin: 0 1rem;
+			color: $color-accent;
+		}
+	}
+	.apod-div {
+		max-width: 650px;
+		margin: 0 auto;
+		a {
+			color: ghostwhite;
+		}
+		a:visited {
+			color: ghostwhite;
+		}
+		a:hover {
+			color: blue;
+		}
+		.apod-img-div {
+			width: 100%;
+			height: 400px;
+			img {
+				width: 100%;
+				height: 400px;
+				object-fit: cover;
+				border: 1px solid ghostwhite;
+			}
+		}
+	}
+}
+.SpaceX {
+	margin-right: 100px;
+	.info-field {
+		font-weight: bold;
+		color: $color-accent;
+	}		
+	.CompanyInfo {
+		margin-bottom: 110px;
+		a, a:visited { 
+		color: $color-accent;
+		text-decoration: none;
+		}
+		a:hover { 
+			color: $color-main;
+		}
+		p { 
+			padding-right: 6rem;
+			padding-bottom: 0;
+			padding-top: 0;
+		}
+		h2 { 
+			padding-top: 3rem;
+		}
+		.youtube {
+			width: 50vw;
+			height: 28.2vw;
+		}
+
+	}
+	.UpcomingLaunches { 
+		margin-bottom: 110px;
+		p { 
+			padding: 0;
+		}
+
+		h2 { 
+			padding: 0;
+		}
+		.launches-div {
+			padding: 2rem 3rem;
+			a, a:visited {
+				color: $color-main;
+				text-decoration: none;
+			}
+			a:hover {
+				color: $color-accent;
+			}
+			.patch {
+				width: 100px;
+				float: left;
+			}
+			.youtube {
+				width: 50vw;
+				height: 28.2vw;
+			}
+			.falcon-div {
+				position: fixed;
+				bottom: 500px;
+				/* top: 0; */
+				left:0;
+				right: 0;
+				height: 100vw;
+				/* background-image: url(../../images/falcon9.png); */
+				background-position: bottom right;
+				background-size: cover;
+				pointer-events: none;
+				filter: drop-shadow(0 0 10px $color-background-default);
+				animation: liftOff 4s ease-out;
+				z-index: 1;
+			}
+			.falcon {
+				width: 100%;
+			}
+		}
+	}
+	.falcon-div {
+		position: fixed;
+		bottom: 500px;
+		left:0;
+		right: 0;
+		height: 100vw;
+		background-position: bottom right;
+		background-size: cover;
+		pointer-events: none;
+		filter: drop-shadow(0 0 10px black);
+		animation: liftOff 4s ease-out;
+		z-index: 1;
+		.falcon {
+			width: 100%;
+		}
+		@media screen and (max-width: 713px) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+.DarkSkies {
+	margin-bottom: -50px;
+	h3 {
+		padding-right: 40px;
+		margin-top: -2rem;
+	}
+	p {
+		margin-top: 2rem;
+		font-size: 1.5rem;
+	}
+	img {
+		margin-top: 3rem;
+	}
+	.render-div {
+		display: flex;
+		flex-direction:column;
+		// align-items: center;
+		padding: 2rem;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.SkyStats {
+		display: flex;
+		flex-direction: column;
+		width: 75%;
+		margin: 0 auto;
+		div {
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			div {
+				width: 75%;
+				display: flex;
+				flex-direction: column;
+				h3,h4 {
+					margin: 0;
+					padding: 0;
+					text-align: center;
+				}
+				h3 {
+					font-size: 2.2vw;
+				}
+				h4 {
+					font-size: 1.5vw;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.render-div {
+			width: 100%;
+			padding: 0;
+		}
+		.SkyStats {
+			width: 100%;
+			align-content: flex-start;
+			div {
+				flex-direction: column;
+				margin: 0;
+				div {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					h3,h4 {
+						margin: 0;
+						padding: 0;
+						text-align: center;
+					}
+					h3 {
+						font-size: 4vw;
+						margin-top: 2rem;
+					}
+					h4 {
+						font-size: 3vw;
+					}
+				}
+			}
+			img {
+				margin-top: 2rem;
+
+			}
+		}
+	}
+}
+.ApodGallery {
+	.apod-flex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: flex-start;
+		padding-top: 2rem;
+		.tile-div {
+			text-align: center;
+			margin: 1rem;
+			width: 300px;
+			border: 1px solid white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: $color-background-default;
+			h4 {
+				padding: 1rem;
+				padding-bottom: 2rem;
+				bottom: 6px;
+			}
+			.tile-link {
+				margin: 1rem;
+				height: 200px;
+				cursor: pointer;
+				object-fit: cover;
+				.tile-img {
+					width: 100%;
+					height: 200px;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+	.ApodModal {
+		width: 80vw;
+		max-height: 95vh;
+		position: fixed;
+		border: 2px solid $color-main;
+		background-color: $color-background-default;
+		overflow-y:auto;
+		h1 {
+			padding: 3rem;
+		}
+		img {
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+		}
+		p {
+			font-size: 1.4rem;
+			padding: 3rem;
+		}
+		h3 {
+			padding-left: 3rem;
+			padding-bottom: 3rem;
+		}
+		#download {
+			color:$color-main;
+			text-decoration: none;
+		}
+		#download:hover {
+			color: $color-accent;
+		}
+		.modal-title-div {
+			font-size: 4rem;
+			border-radius: 10%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			.close {
+				color: $color-main;
+				cursor: pointer;
+				margin-left: 40px;
+			}
+
+			.close:hover {
+				color: $color-accent;
+			}
+		}
+	}
+}
+.FilmAndTv {
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+	h1 {
+		align-self: flex-start;
+	}
+	p {
+		align-self: flex-start;
+	}
+	.films-div {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		justify-content: center;
+		width: 95%;
+		gap: 0;
+		margin: 0 auto;
+		.FilmTile {
+			margin-bottom: 4rem;
+			img {
+				width: 200px;
+				margin: 2rem 7rem;
+			}
+			h1 {
+				font-size: 1.8rem;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
+	@media screen and (max-width: 1320px) {
+		.films-div {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		.films-div {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media screen and (max-width: 600px) {
+		
+		.films-div {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	#tv-home {
+		align-self: center;
+	}
+}

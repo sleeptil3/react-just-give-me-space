@@ -1,0 +1,158 @@
+// // header
+// @media screen and (max-width: 600px) {
+	
+// 	.site-heading {
+// 		font-size: 2rem;
+// 		margin-top: -15px;
+// 	}
+// 	.site-sub {
+// 		font-size: 1.5rem;
+// 	}
+
+// 	.footer-p {
+// 		font-size: 1rem;
+// 	}
+// 	.Home {
+// 		margin:0 auto;
+// 		padding: 0;
+// 		text-align: justify;
+// 		width: 100%;
+// 	}
+// 	.quote {
+// 		padding: 20px;
+// 	}
+// 	.quote h2 {
+// 		font-size: 2rem;
+// 	}
+// 	.apod-div h1 {
+// 		font-size: 6vw;
+// 	}
+// 	.apod-img-div {
+// 		max-height: 200px;
+// 	}
+// 	.apod-img-div img {
+// 			max-height: 200px;
+// 	}
+// 	.SpaceX {
+// 		margin-top: 110px;
+// 	}
+// 	select {
+// 		background: none;
+// 	}	
+// 	.falcon-div {
+// 		bottom: 250px;
+// 	}
+// 	.CompanyInfo p { 
+// 	padding-right: 0;
+// 	}
+// 	.CompanyInfo h1{ 
+// 		padding-bottom: 1rem;
+// 	}
+// 	.CompanyInfo h2{ 
+// 		padding-top: 1rem;
+// 	}
+// 	.UpcomingLaunches h1 {
+// 		font-size:6vw;
+// 	}
+// 	.UpcomingLaunches h2 {
+// 		font-size: 4vw;
+// 	}
+// 	.patch {
+// 		margin-top: 2rem;
+// 		margin-bottom: -1rem;
+// 		width: 50px;
+// 		float: none;
+// 	}
+// 	.launches-div {
+// 		padding: 0;
+// 		margin: 0;
+// 	}
+// 	.launch-info {
+// 		margin-left: 0;
+// 	}
+// 	.launch-info h2 {
+// 		margin-bottom: -1rem;
+// 	}
+// 	.launch-info p {
+// 		font-size: 2.5vw;
+// 		margin-bottom: -1rem;
+// 	}
+// 	.ApodGallery {
+// 		margin-top: 100px;
+// 	}
+// 	.ApodGallery h1 {
+// 		margin-right: 2rem;
+// 	}
+// 	.ApodGallery p {
+// 		padding: 0;
+// 	}
+// 	.ApodModal {
+// 		max-height: 70vh;
+// 		width: 99vw;
+// 		border: 1px solid $color-main;
+// 		opacity: 0;
+// 		transition: opacity .25s;
+// 	}
+// 	.ApodModal img {
+// 		max-height: 20vh;
+// 	}
+// 	.ApodModal p {
+// 		margin: 2rem;
+// 	}
+// 	.modal-title-div h1 {
+// 		font-size: 5vw;
+// 		margin-left: 0;
+// 		padding: 2rem 1.5rem;
+// 	}
+// 	.close {
+// 		font-size: 3rem;
+// 		margin-left: 20px;
+// 	}
+// 	.FilmAndTv {
+// 		margin-top: 125px;
+// 	}
+// 	.films-div {
+// 		grid-template-columns: 1fr;
+// 	}
+// 	.FilmAndTv h1 {
+// 		font-size: 6vw;
+// 	}
+// 	.DarkSkies {
+// 		margin-top: 120px;
+// 	}
+// 	.DarkSkies p {
+// 		margin-top: 1rem;
+// 		padding-top: 0;
+// 	}
+// 	.SkyStats > div {
+// 		flex-direction: column;
+// 		justify-content: flex-start;
+// 		margin-top: 0;
+// 	}
+// 	.SkyStats h3 {
+// 		font-size: 6vw;
+// 		padding: 0;
+// 		padding-top: 2rem;
+// 	}
+// 	.SkyStats h4 {
+// 		font-size: 4vw;
+// 		padding: 0;
+// 	}
+// 	.sky-results{
+// 		width: 99vw;
+// 	}
+	
+// }
+
+// @media screen and (max-width: 1160px) {
+// 	.films-div {
+// 		grid-template-columns: repeat(2, 1fr);
+// 	}
+// }
+
+// @media screen and (max-height: 800px){
+// 	.falcon {
+// 		position: relative;
+// 		bottom: -200px;
+// 	}
+// }

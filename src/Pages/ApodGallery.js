@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import ApodModal from '../../Components/ApodModal/ApodModal'
+import ApodModal from '../Components/ApodModal'
 import { v4 as uuid } from 'uuid'
-import './apodgallery.css'
-
 
 export default function ApodGallery({ apodData }) {
 	const [showModal, setShowModal] = useState(false);

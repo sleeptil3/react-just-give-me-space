@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Home from './Pages/Home/Home'
-import ApodGallery from './Pages/ApodGallery/ApodGallery'
-import SpaceX from './Pages/SpaceX/SpaceX'
-import DarkSkies from './Pages/DarkSkies/DarkSkies'
-import FilmAndTv from './Pages/FilmAndTv/FilmAndTv'
-import NavSlider from './Components/NavSlider/NavSlider'
+import Home from './Pages/Home'
+import ApodGallery from './Pages/ApodGallery'
+import SpaceX from './Pages/SpaceX'
+import DarkSkies from './Pages/DarkSkies'
+import FilmAndTv from './Pages/FilmAndTv'
+import NavSlider from './Components/NavSlider'
+import saturn from './images/saturn.png'
 import { start_date, year } from './Data/GeneralData'
 import { CgCopyright } from "react-icons/cg";
-import './App.css'
 
 export default function App() {
 	const [apodData, setApodData] = useState([])
@@ -33,6 +33,16 @@ export default function App() {
 
 	return (
 		<div className="App">
+			<div className='stars'></div>
+			<header>
+				<div className='header-div'>
+					<div>
+						<h1 className='site-heading'>just give me <span className='space'>SPACE</span></h1>
+						<p className='site-sub'>A Website for <span className='nerds'>Space Nerds</span></p>
+					</div>
+				</div>
+				<img src={saturn} alt='saturn next to the site title' />
+			</header>
 			<main>
 				<NavSlider />
 				<Switch>

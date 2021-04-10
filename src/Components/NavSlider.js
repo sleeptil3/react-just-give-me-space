@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { navData } from '../../Data/GeneralData'
+import { navData } from '../Data/GeneralData'
 import { v4 as uuid } from 'uuid';
 import { FaSpaceShuttle } from 'react-icons/fa';
-import './navslider.css'
 
 export default function NavSlider() {
 
@@ -21,9 +20,9 @@ export default function NavSlider() {
 	})
 
 	return (
-		<div className={opacityToggle ? 'navbar-div show' : 'navbar-div'}>
-			<div className={slideInNav ? ' navbar-container slide-in' : 'navbar-container'}>
-				<div onClick={handleClick} className={rotateToggle ? 'nav-icon rotate' : 'nav-icon'}>
+		<div className={opacityToggle ? 'NavSlider show' : 'NavSlider'}>
+			<div onMouseEnter={handleClick} onMouseLeave={handleClick} className={slideInNav ? ' NavSlider-container slide-in' : 'NavSlider-container'}>
+				<div className={rotateToggle ? 'nav-icon rotate' : 'nav-icon'}>
 					<FaSpaceShuttle />
 				</div>
 				<ul className='nav-list'>
@@ -31,7 +30,7 @@ export default function NavSlider() {
 						navData.map(item => {
 							return (
 								<Link key={uuid()} to={item.path}>
-									<li className={item.class} onClick={handleClick}>
+									<li className={item.class}>
 										{item.name}
 									</li>
 								</Link>

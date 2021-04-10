@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Poppins:wght@200&display=swap');
+
+// Fonts
+$font-main: Poppins, sans-serif;
+$font-headings: Oswald, Helvetica, sans-serif;
+$base-line-height: 2.2rem;
+$base-font-size: 10px;
+$fontsize-body: 1.4rem;
+
+// Breakpoints
+$bp-small: 768px; 
+$bp-medium: 1024px; 
+$bp-large: 1366px;
+$bp-xlarge: 1920px;
+$bp-xxlarge: 2560px;
+
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+
+// Colors
+$offwhite:	#f5f5ff;
+$darkblue:	#022933;
+$yellow:		#FFBA00;
+$blue:		#002fe9;
+$green:		#548C27;
+$orange:		#F39856;
+$red:			#D14348;
+$purple:		#6D73C2;
+$black:		#000000;
+
+$color-main: $offwhite;
+$color-background-default: $black;
+$color-accent: $blue;

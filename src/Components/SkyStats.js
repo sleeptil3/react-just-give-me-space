@@ -1,5 +1,4 @@
-import loading from '../../images/loading.gif'
-import './skystats.css'
+import loading from '../images/loading.gif'
 
 export default function SkyStats({ lat, long, renderSkyStats, skyData }) {
 
@@ -12,7 +11,7 @@ export default function SkyStats({ lat, long, renderSkyStats, skyData }) {
 					<div>
 						<h3>Your Location</h3>
 						<h4>Latitude: {lat.toFixed(2)}</h4>
-						<h4>Longitude: {long.toFixed(2)}</h4>a
+						<h4>Longitude: {long.toFixed(2)}</h4>
 					</div>
 					<div>
 						<h3>AstroConditions</h3>

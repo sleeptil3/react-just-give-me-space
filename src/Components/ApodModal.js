@@ -1,4 +1,3 @@
-import './apodmodal.css'
 import { FaWindowClose } from "react-icons/fa";
 
 
@@ -9,7 +8,7 @@ export default function ApodModal(props) {
 		return null
 	} else {
 		return (
-			<div className='ApodModal center fadeIn' >
+			<div className='ApodModal center fadeIn1' >
 				<div className='modal-title-div' onClick={props.handleClick}>
 					<FaWindowClose className='close' />
 					<h1>{props.data.title}</h1>

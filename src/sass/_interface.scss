@@ -1,0 +1,41 @@
+.button-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem;
+}
+
+.button {
+	background-color: transparent;
+	display: inline-block;
+	outline: none;
+	border: none;
+	transition: transform .1s linear, background-color .1s;
+	cursor: pointer;
+	color: $color-main;
+	margin: 2rem auto;
+	padding: 1rem 2rem;
+	border: 1px solid white;
+}
+
+.button:hover {
+  color: $color-main;
+  background-color: $color-accent;
+}
+.button:active {
+	transform: scale(.95)
+}
+
+.link {
+	font-size: 1.4rem;
+	text-decoration: none;
+	color: $color-main;
+}
+
+.link:visited {
+	color: $color-main;
+}
+
+.main-loading {
+		width: 70px;
+}

@@ -1,0 +1,69 @@
+@keyframes starfield {
+	0% {
+		transform: translateY(-100%);
+		background-position: bottom left;
+	}
+	.3% {transform: translateY(0);}
+	100% {background-position: top right;}
+}
+
+@keyframes starFade {
+	0%		{filter: opacity(0)}
+	30% 	{filter: opacity(.8)}
+	100%		{filter: opacity(.15)}
+}
+
+@keyframes filterFade {
+	from 	{filter: opacity(1)}
+	to		{filter: opacity(.2)}
+}
+
+@keyframes fadeInPause {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn2 {
+	0% {opacity: 0;}
+	100% {opacity: .2;}
+}
+
+@keyframes liftOff {
+	0% {transform: translate(0,900px)}
+	1% {transform: translate(-5px, 890px)}
+	2% {transform: translate(5px, 880px)}
+	3% {transform: translate(-5px, 870px)}
+	4% {transform: translate(5px, 860px)}
+	5% {transform: translate(-5px, 850px)}
+	6% {transform: translate(-5px, 840px)}
+	7% {transform: translate(5px, 830px)}
+	8% {transform: translate(0, 820px)}
+	9% {transform: translate(5px, 810px)}
+	10% {transform: translate(0,800px)}
+	11% {transform: translate(-4px, 790px)}
+	12% {transform: translate(4px, 780px)}
+	13% {transform: translate(-4px, 770px)}
+	14% {transform: translate(3px, 760px)}
+	15% {transform: translate(-3px, 750px)}
+	16% {transform: translate(-2px, 740px)}
+	17% {transform: translate(2px, 730px)}
+	18% {transform: translate(-1px, 720px)}
+	19% {transform: translate(1px, 710px)}
+	20% {transform: translate(0,700px)}
+	21% {transform: translate(-1px, 690px)}
+	22% {transform: translate(0, 680px)}
+	23% {transform: translate(1px, 670px)}
+	24% {transform: translate(-.5px, 660px)}
+	25% {transform: translate(.4px, 650px)}
+	26% {transform: translate(-.2px, 640px)}
+	27% {transform: translate(.1px, 630px)}
+	28% {transform: translate(-.1px, 620px)}
+	29% {transform: translate(-.05px, 610px)}
+	100% {transform: translate(0, 0)}
+}
