@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im"
+import carlSagan from '../images/carlsagan.jpg'
 
 export default function Home({ apodData }) {
 
@@ -24,8 +25,11 @@ export default function Home({ apodData }) {
 					<span className='heavy'>-Shawn</span>
 				</p>
 				<div className='quote'>
-					<h2><ImQuotesLeft className='accent-color quote-icon' />If you wish to make an apple pie from scratch, you must first invent the universe<ImQuotesRight className='accent-color quote-icon' /></h2>
-					<h2 className='light'>-Carl Sagan</h2>
+					<div>
+						<h2><ImQuotesLeft className='quote-icon' />If you wish to make an apple pie from scratch, you must first invent the universe<ImQuotesRight className='accent-color quote-icon' /></h2>
+						<h2 className='light'>-Carl Sagan</h2>
+					</div>
+					<img src={carlSagan} />
 				</div>
 
 				<div className='apod-div'>

@@ -6,12 +6,10 @@ import { FaSpaceShuttle } from 'react-icons/fa';
 
 export default function NavSlider() {
 
-	const [slideInNav, setSlideInNav] = useState(false)
 	const [opacityToggle, setOpacityToggle] = useState(false)
 	const [rotateToggle, setRotateToggle] = useState(false)
 
 	const handleClick = () => {
-		setSlideInNav(!slideInNav)
 		setRotateToggle(!rotateToggle)
 	}
 
@@ -20,8 +18,8 @@ export default function NavSlider() {
 	})
 
 	return (
-		<div className={opacityToggle ? 'NavSlider show' : 'NavSlider'}>
-			<div onMouseEnter={handleClick} onMouseLeave={handleClick} className={slideInNav ? ' NavSlider-container slide-in' : 'NavSlider-container'}>
+		<div className='NavSlider'>
+			<div onMouseEnter={handleClick} onMouseLeave={handleClick} className='NavSlider-container'>
 				<div className={rotateToggle ? 'nav-icon rotate' : 'nav-icon'}>
 					<FaSpaceShuttle />
 				</div>
@@ -39,7 +37,7 @@ export default function NavSlider() {
 					}
 				</ul>
 			</div>
-		</div>
+		</div >
 	)
 }
 

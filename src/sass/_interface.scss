@@ -21,11 +21,18 @@
 .button:hover {
   color: $color-main;
   background-color: $color-accent;
+  transform: scale(1.05);
+  transition: transform .5s;
 }
 .button:active {
 	transform: scale(.95)
 }
-
+a, a:visited {
+	color: $color-main;
+}
+a:hover {
+	color: $color-accent;
+}
 .link {
 	font-size: 1.4rem;
 	text-decoration: none;
@@ -36,6 +43,12 @@
 	color: $color-main;
 }
 
-.main-loading {
-		width: 70px;
+select {
+	outline: none;
+	border: 1px solid ghostwhite;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	color: ghostwhite;
+	background-color: transparent;
 }

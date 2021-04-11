@@ -19,10 +19,6 @@ export default function CompanyInfo() {
 		return (
 			<div className='CompanyInfo fadeIn'>
 				<h1>Company Info</h1>
-				<h2>Video</h2>
-				<div className='youtube'>
-					<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/A0FZIwabctw?start=48" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
 				<h2>Summary</h2>
 				<p>{companyInfo.summary}</p>
 				<h2>Links</h2>

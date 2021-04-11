@@ -1,4 +1,9 @@
 export const navData = [
+	// {
+	// 	name: 'React Spring',
+	// 	path: '/springdemo',
+	// 	class: 'nav-item'
+	// },
 	{
 		name: 'Home',
 		path: '/',
@@ -17,6 +22,11 @@ export const navData = [
 	{
 		name: 'APOD Gallery',
 		path: '/apodgallery',
+		class: 'nav-item'
+	},
+	{
+		name: 'Videos',
+		path: '/apodvideogallery',
 		class: 'nav-item'
 	},
 	{

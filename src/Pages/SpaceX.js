@@ -39,6 +39,9 @@ export default function SpaceX() {
 		<div className='SpaceX fadeIn'>
 			<div>
 				<h1>SpaceX</h1>
+				<div className='youtube'>
+					<iframe src="https://www.youtube-nocookie.com/embed/A0FZIwabctw?start=48" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 				<p className='get-content-p'>SpaceX currently leads the world in private space exploration and they are a constant inspiration to me. Here, you'll find info on upcoming launches as well as details on their program.</p>
 			</div>
 			<div>
