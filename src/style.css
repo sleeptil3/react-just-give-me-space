@@ -271,6 +271,7 @@ select {
   height: 100vh;
   z-index: -1;
   opacity: 0;
+  animation: starfield 500s linear both;
 }
 .App header {
   background-image: url("images/header-bkg.jpeg");
