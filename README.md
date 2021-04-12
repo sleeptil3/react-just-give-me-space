@@ -32,4 +32,12 @@ Just Give Me SPACE was a project created for General Assembly. The requirements 
 * Application Program Interface (API)
 * Framer Motion Library
 
+## Known Bugs and Future Updates
+
+* Nav on Safari sticks out, like a Framer issue
+* Some animation performance issues that need hammered out with more attention
+
+*If you find any bugs, please let me know at [sleeptil3software@gmail.com](mailto:sleeptil3software@gmail.com)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and published using `gh-pages`
