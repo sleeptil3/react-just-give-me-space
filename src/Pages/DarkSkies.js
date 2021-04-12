@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SkyStats from '../Components/SkyStats'
+import { motion } from "framer-motion"
+
 
 export default function DarkSkies(props) {
 	const [lat, setLat] = useState(null)
@@ -36,7 +38,7 @@ export default function DarkSkies(props) {
 	})
 
 	return (
-		<div className='DarkSkies fadeIn'>
+		<motion.div animate={{ opacity: 1 }} transition={{ ease: "easeOut", duration: 1 }} className='DarkSkies'>
 			<div>
 				<h1>DarkSkies</h1>
 				<p>You can use this utility to check the astronomy forcast for your location! Be sure to allow location sharing when it pops up for it to work properly.</p>
@@ -51,6 +53,6 @@ export default function DarkSkies(props) {
 					<Link to="/" className='button link'>Back to Home</Link>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }

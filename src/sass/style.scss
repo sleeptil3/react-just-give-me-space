@@ -19,7 +19,8 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
-		animation: starFade 4s linear forwards, starfield 300s linear both;
+		opacity: 0;
+		// animation: starFade 4s linear forwards, starfield 300s linear both;
 	}
 	display: flex;
 	flex-direction: column;
@@ -31,13 +32,13 @@
 		animation: starfield 300s linear both;
 		animation-fill-mode: forwards;
 		position: fixed;
-		top: 0;
+		top: -170px;
 		height: 120px;
 		width: 100%;
 		margin: 0 auto;
 		padding-left: 6rem;
 		border-bottom: 1px solid $color-main;
-		z-index: 0;
+		z-index: 0;	
 		.header-div {
 			display: flex;
 			flex-direction: row;
@@ -71,13 +72,17 @@
 			}
 		}
 		img {
-			position: absolute;
-			bottom: -19px;
-			left:300px;
+			position: relative;
+			bottom: 80px;
+			left: 300px;
 			z-index: -1;
 			width: 160px;
 			filter: drop-shadow( 4px 10px 9px rgba(0, 0, 0, 0.445));
 		}
+		
+	}
+	header:hover {
+		color: $offwhite;
 	}
 	main {
 		margin: 0 auto;
@@ -87,15 +92,14 @@
 		width: 80%;
 		font-size: $fontsize-body;
 		.NavSlider {
-			opacity: 0;
-			animation: fadeIn 1s 1s forwards;
-			position: relative;
+			opacity: 1;
+			position: fixed;
+			top: 145px;
+			right: -630px;
 			z-index: 1000;
 		}
 		.NavSlider-container {
-			position: fixed;
-			top: 145px;
-			right: -570px;
+			position: relative;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
@@ -128,10 +132,6 @@
 				}
 			}
 		}
-		.NavSlider-container:hover {
-			right: 0;
-			transition: right .2s;
-		}
 		.nav-icon {
 			font-size: 3rem;
 			display: flex;
@@ -142,12 +142,9 @@
 			bottom: 1px;
 			left: 12px;
 			height: 35px;
-			transform: rotate(180deg);
+			// transform: rotate(180deg);
 			cursor: pointer;
-			transition: transform 1s .5s;
-		}
-		.nav-icon.rotate {
-			transform: rotate(0);
+			// transition: transform 1s .25s;
 		}
 	}
 	footer {
@@ -222,9 +219,9 @@
 			padding-left: 2vw;
 			img {
 				width: 120px;
-				left: unset;
-				bottom: 16px;
-				right: 10vw;
+				left: 260px;
+				bottom: 66px;
+				// right: 10vw;
 			}
 			.header-div {
 				position: relative;
@@ -251,6 +248,7 @@
 	}
 }
 .Home {
+	opacity: 0;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -258,6 +256,8 @@
 	align-content: center;
 	font-size: inherit;
 	.quote {
+		margin-top: -3rem;
+		padding-left:2rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
@@ -283,6 +283,9 @@
 	.apod-div {
 		max-width: 650px;
 		margin: 0 auto;
+		h1 {
+			margin-bottom: 0;
+		}
 		a {
 			color: ghostwhite;
 		}
@@ -305,6 +308,7 @@
 	}
 }
 .SpaceX {
+	opacity: 0;
 	margin-right: 140px;
 	.youtube {
 		iframe {
@@ -358,8 +362,8 @@
 	}
 	.falcon-div {
 		position: fixed;
-		bottom: 500px;
-		left:0;
+		bottom: 400px;
+		left: 0;
 		right: 0;
 		height: 100vw;
 		background-position: bottom right;
@@ -421,6 +425,7 @@
 	}
 }
 .DarkSkies {
+	opacity: 0;
 	margin-bottom: -50px;
 	h3 {
 		padding-right: 40px;
@@ -507,6 +512,7 @@
 	}
 }
 .ApodGallery {
+	opacity: 0;
 	.apod-flex {
 		display: flex;
 		flex-wrap: wrap;
@@ -589,6 +595,7 @@
 	}
 }
 .ApodVideoGallery {
+	opacity: 0;
 	h1 {
 		font-size: 5vw;
 	}
@@ -627,10 +634,9 @@
 	}
 }
 .FilmAndTv {
+	opacity: 0;
 	display: flex;
 	flex-direction: column;
-	// justify-content: center;
-	// align-items: center;
 	h1 {
 		align-self: flex-start;
 	}

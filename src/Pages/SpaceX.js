@@ -3,6 +3,7 @@ import CompanyInfo from '../Components/SpaceX/CompanyInfo'
 import UpcomingLaunches from '../Components/SpaceX/UpcomingLaunches'
 import { dropDownData } from '../Data/GeneralData'
 import { v4 as uuid } from 'uuid'
+import { motion } from "framer-motion"
 import falcon9 from '../images/falcon9.png'
 
 export default function SpaceX() {
@@ -15,7 +16,6 @@ export default function SpaceX() {
 	}
 
 	const handleSelect = (e) => {
-		console.log(e.target.options.selectedIndex)
 		hideAll()
 		switch (e.target.options.selectedIndex) {
 			case 0: break
@@ -36,11 +36,11 @@ export default function SpaceX() {
 	}, [])
 
 	return (
-		<div className='SpaceX fadeIn'>
+		<motion.div animate={{ opacity: 1 }} transition={{ duration: 1 }} className='SpaceX'>
 			<div>
 				<h1>SpaceX</h1>
 				<div className='youtube'>
-					<iframe src="https://www.youtube-nocookie.com/embed/A0FZIwabctw?start=48" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe src="https://www.youtube-nocookie.com/embed/A0FZIwabctw?start=48" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true'></iframe>
 				</div>
 				<p className='get-content-p'>SpaceX currently leads the world in private space exploration and they are a constant inspiration to me. Here, you'll find info on upcoming launches as well as details on their program.</p>
 			</div>
@@ -57,6 +57,6 @@ export default function SpaceX() {
 			<div className='falcon-div'>
 				<img src={falcon9} alt='falcon 9 dramatically entering screen simulating launch' className='falcon' />
 			</div>
-		</div>
+		</motion.div>
 	)
 }

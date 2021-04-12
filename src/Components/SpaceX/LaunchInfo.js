@@ -1,4 +1,6 @@
 import spaceXBadge from '../../images/spacex.png'
+import { motion } from "framer-motion"
+
 
 export default function LaunchInfo({ data }) {
 	if (data !== undefined) {
@@ -13,7 +15,7 @@ export default function LaunchInfo({ data }) {
 		if (launchDate) {
 			console.log(data)
 			return (
-				<div className='launch-div fadeIn'>
+				<motion.div animate={{ opacity: 1 }} transition={{ from: 0, ease: "easeOut", duration: 1 }} className='launch-div'>
 					{data.links.patch.small ? <img className='patch' src={data.links.patch.small} alt={`patch for mission ${data.name}`} /> : <img className='patch' src={spaceXBadge} alt={`spaceX logo substitute for missing mission patch`} />}
 					<div className='launch-info'>
 						<h2>{data.name}</h2>
@@ -21,7 +23,7 @@ export default function LaunchInfo({ data }) {
 						<p><span className='info-field'>Expected Launch Date</span>: {parseDate()}</p>
 						{data.links.wikipedia ? <p><span className='info-field'>WikiPage</span>: <a href={data.links.wikipedia}>{data.links.wikipedia}</a></p> : ''}
 					</div>
-				</div>
+				</motion.div>
 			)
 		} else {
 			return ''

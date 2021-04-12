@@ -1,9 +1,4 @@
 export const navData = [
-	// {
-	// 	name: 'React Spring',
-	// 	path: '/springdemo',
-	// 	class: 'nav-item'
-	// },
 	{
 		name: 'Home',
 		path: '/',

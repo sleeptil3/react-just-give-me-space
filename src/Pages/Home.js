@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im"
 import carlSagan from '../images/carlsagan.jpg'
+import { motion } from 'framer-motion'
 
 export default function Home({ apodData }) {
 
@@ -13,7 +14,7 @@ export default function Home({ apodData }) {
 		return ''
 	} else {
 		return (
-			<div className='Home fadeIn'>
+			<motion.div className='Home fadeIn' animate={{ opacity: 1 }} transition={{ ease: "easeOut", duration: 1 }}>
 				<h1>Welcome.</h1>
 				<p>
 					Welcome to JUST GIVE ME SPACE, a website for space nerds. Feel free to explore and I hope you enjoy the site! You'll find a a dark sky forecast page that will display the viewing conditions in your chosen locale, a SpaceX information page, a gallery of astronomy pictures, and a collection of films that revolve around space themes, 'orbit' pun intended.
@@ -43,7 +44,7 @@ export default function Home({ apodData }) {
 					<h3>{apodData[apodData.length - 1].title}</h3>
 					<p>{apodData[apodData.length - 1].explanation}</p>
 				</div>
-			</div>
+			</motion.div>
 		)
 	}
 }

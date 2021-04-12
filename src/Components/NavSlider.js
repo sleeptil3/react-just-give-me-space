@@ -1,28 +1,40 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { navData } from '../Data/GeneralData'
-import { v4 as uuid } from 'uuid';
-import { FaSpaceShuttle } from 'react-icons/fa';
+import { rotateVariants } from '../Components/Elements'
+import { v4 as uuid } from 'uuid'
+import { FaSpaceShuttle } from 'react-icons/fa'
+import { motion, useAnimation } from "framer-motion"
 
 export default function NavSlider() {
 
-	const [opacityToggle, setOpacityToggle] = useState(false)
 	const [rotateToggle, setRotateToggle] = useState(false)
-
-	const handleClick = () => {
-		setRotateToggle(!rotateToggle)
-	}
+	const controls = useAnimation()
 
 	useEffect(() => {
-		setTimeout(() => setOpacityToggle(true), 3000)
-	})
+		console.log(rotateToggle)
+	}, [rotateToggle])
 
 	return (
-		<div className='NavSlider'>
-			<div onMouseEnter={handleClick} onMouseLeave={handleClick} className='NavSlider-container'>
-				<div className={rotateToggle ? 'nav-icon rotate' : 'nav-icon'}>
+		<motion.div
+			className='NavSlider'
+			animate={{ right: [null, '-570px', '-505px', '-570px'] }}
+			transition={{ ease: `easeOut`, duration: 2, times: [0, .6, .7, 1], delay: 3.5 }}
+		>
+			<motion.div
+				className='NavSlider-container'
+				whileHover={{ right: '570px' }}
+				transition={{ ease: `easeOut`, duration: .2 }}
+				onHoverStart={() => controls.start({ transform: 'rotate(0deg)' })}
+				onHoverEnd={() => controls.start({ transform: 'rotate(180deg)' })}
+			>
+				<motion.div className='nav-icon'
+					animate={controls}
+					transition={{ duration: 1, delay: .6 }}
+					initial={{ transform: 'rotate(180deg)' }}
+				>
 					<FaSpaceShuttle />
-				</div>
+				</motion.div>
 				<ul className='nav-list'>
 					{
 						navData.map(item => {
@@ -36,8 +48,8 @@ export default function NavSlider() {
 						})
 					}
 				</ul>
-			</div>
-		</div >
+			</motion.div>
+		</motion.div >
 	)
 }
 

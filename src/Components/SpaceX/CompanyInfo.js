@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { motion } from "framer-motion"
+
 
 export default function CompanyInfo() {
 	const [companyInfo, setCompanyInfo] = useState()
@@ -17,7 +19,7 @@ export default function CompanyInfo() {
 
 	if (companyInfo !== undefined) {
 		return (
-			<div className='CompanyInfo fadeIn'>
+			<motion.div animate={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }} className='CompanyInfo'>
 				<h1>Company Info</h1>
 				<h2>Summary</h2>
 				<p>{companyInfo.summary}</p>
@@ -32,7 +34,7 @@ export default function CompanyInfo() {
 				<p><span className='info-field'>CTO: </span>{companyInfo.cto}</p>
 				<p><span className='info-field'>CTO of Propulsion: </span>{companyInfo.cto_propulsion}</p>
 				<p><span className='info-field'>Number of Employees: </span>{companyInfo.employees}</p>
-			</div>
+			</motion.div>
 		)
 	} else {
 		return <h2>Loading</h2>

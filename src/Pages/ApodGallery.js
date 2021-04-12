@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ApodModal from '../Components/ApodModal'
 import { v4 as uuid } from 'uuid'
+import { motion } from "framer-motion"
 
 export default function ApodGallery({ apodData }) {
 	const [showModal, setShowModal] = useState(false);
@@ -17,8 +18,12 @@ export default function ApodGallery({ apodData }) {
 		console.log(`Show Modal: ${showModal}`)
 	}
 
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
 	return (
-		<div className='ApodGallery fadeIn'>
+		<motion.div animate={{ opacity: 1 }} transition={{ ease: "easeOut", duration: 1 }} className='ApodGallery'>
 			<h1>Astronomy Picture of the Day Gallery</h1>
 			<p>To see a collection of APOD videos, <Link to="/apodvideogallery">click here</Link></p>
 			<p><span className='light'>Data Provided by </span><b>NASA</b></p>
@@ -38,6 +43,6 @@ export default function ApodGallery({ apodData }) {
 				<Link to="/" className='button link'>Back to Home</Link>
 			</div>
 			<ApodModal handleClick={handleClick} showModal={showModal} data={currentObject} />
-		</div>
+		</motion.div>
 	)
 }

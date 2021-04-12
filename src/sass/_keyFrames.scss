@@ -5,37 +5,37 @@
 	100% {background-position: top right;}
 }
 
-@keyframes starFade {
-	0%		{filter: opacity(0)}
-	30% 	{filter: opacity(.8)}
-	100%		{filter: opacity(.15)}
-}
+// @keyframes starFade {
+// 	0%		{filter: opacity(0)}
+// 	30% 	{filter: opacity(.8)}
+// 	100%		{filter: opacity(.15)}
+// }
 
-@keyframes filterFade {
-	from 	{filter: opacity(1)}
-	to		{filter: opacity(.2)}
-}
+// @keyframes filterFade {
+// 	from 	{filter: opacity(1)}
+// 	to		{filter: opacity(.2)}
+// }
 
-@keyframes fadeInPause {
-	0% {opacity: 0;}
-	50% {opacity: 0;}
-	100% {opacity: 1;}
-}
+// @keyframes fadeInPause {
+// 	0% {opacity: 0;}
+// 	50% {opacity: 0;}
+// 	100% {opacity: 1;}
+// }
 
-@keyframes fadeIn {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
-}
+// @keyframes fadeIn {
+// 	0% {opacity: 0;}
+// 	100% {opacity: 1;}
+// }
 
-@keyframes fadeIn2 {
-	0% {opacity: 0;}
-	100% {opacity: .2;}
-}
+// @keyframes fadeIn2 {
+// 	0% {opacity: 0;}
+// 	100% {opacity: .2;}
+// }
 
-@keyframes slideInNav {
-	0% {right: -570px;;}
-	100% {right: 0;}
-}
+// @keyframes slideInNav {
+// 	0% {right: -570px;;}
+// 	100% {right: 0;}
+// }
 
 
 @keyframes liftOff {

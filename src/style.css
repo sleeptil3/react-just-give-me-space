@@ -51,6 +51,7 @@ h3 {
   font-family: Oswald, Helvetica, sans-serif;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 h4 {
@@ -131,60 +132,6 @@ select {
   }
   100% {
     background-position: top right;
-  }
-}
-@keyframes starFade {
-  0% {
-    filter: opacity(0);
-  }
-  30% {
-    filter: opacity(0.8);
-  }
-  100% {
-    filter: opacity(0.15);
-  }
-}
-@keyframes filterFade {
-  from {
-    filter: opacity(1);
-  }
-  to {
-    filter: opacity(0.2);
-  }
-}
-@keyframes fadeInPause {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
-@keyframes slideInNav {
-  0% {
-    right: -570px;
-  }
-  100% {
-    right: 0;
   }
 }
 @keyframes liftOff {
@@ -282,26 +229,6 @@ select {
     transform: translate(0, 0);
   }
 }
-.fadeInPause {
-  animation: fadeInPause 1.5s;
-}
-
-.fadeIn {
-  animation: fadeIn 1s;
-}
-
-.fadeIn1 {
-  animation: fadeIn 0.25s;
-}
-
-.show {
-  opacity: 1;
-}
-
-.slide-in {
-  right: 0;
-}
-
 .light {
   font-weight: lighter;
 }
@@ -343,7 +270,7 @@ select {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  animation: starFade 4s linear forwards, starfield 300s linear both;
+  opacity: 0;
 }
 .App header {
   background-image: url("images/header-bkg.jpeg");
@@ -351,7 +278,7 @@ select {
   animation: starfield 300s linear both;
   animation-fill-mode: forwards;
   position: fixed;
-  top: 0;
+  top: -170px;
   height: 120px;
   width: 100%;
   margin: 0 auto;
@@ -392,12 +319,15 @@ select {
   color: #f5f5ff;
 }
 .App header img {
-  position: absolute;
-  bottom: -19px;
+  position: relative;
+  bottom: 80px;
   left: 300px;
   z-index: -1;
   width: 160px;
   filter: drop-shadow(4px 10px 9px rgba(0, 0, 0, 0.445));
+}
+.App header:hover {
+  color: #f5f5ff;
 }
 .App main {
   margin: 0 auto;
@@ -408,15 +338,14 @@ select {
   font-size: 1.4rem;
 }
 .App main .NavSlider {
-  opacity: 0;
-  animation: fadeIn 1s 1s forwards;
-  position: relative;
+  opacity: 1;
+  position: fixed;
+  top: 145px;
+  right: -630px;
   z-index: 1000;
 }
 .App main .NavSlider-container {
-  position: fixed;
-  top: 145px;
-  right: -570px;
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -449,10 +378,6 @@ select {
 .App main .NavSlider-container ul a:active {
   text-decoration: underline;
 }
-.App main .NavSlider-container:hover {
-  right: 0;
-  transition: right 0.2s;
-}
 .App main .nav-icon {
   font-size: 3rem;
   display: flex;
@@ -463,12 +388,7 @@ select {
   bottom: 1px;
   left: 12px;
   height: 35px;
-  transform: rotate(180deg);
   cursor: pointer;
-  transition: transform 1s 0.5s;
-}
-.App main .nav-icon.rotate {
-  transform: rotate(0);
 }
 .App footer {
   display: flex;
@@ -542,9 +462,8 @@ select {
   }
   .App header img {
     width: 120px;
-    left: unset;
-    bottom: 16px;
-    right: 10vw;
+    left: 260px;
+    bottom: 66px;
   }
   .App header .header-div {
     position: relative;
@@ -569,6 +488,7 @@ select {
   }
 }
 .Home {
+  opacity: 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -577,6 +497,8 @@ select {
   font-size: inherit;
 }
 .Home .quote {
+  margin-top: -3rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -601,6 +523,9 @@ select {
   max-width: 650px;
   margin: 0 auto;
 }
+.Home .apod-div h1 {
+  margin-bottom: 0;
+}
 .Home .apod-div a {
   color: ghostwhite;
 }
@@ -622,6 +547,7 @@ select {
 }
 
 .SpaceX {
+  opacity: 0;
   margin-right: 140px;
 }
 .SpaceX .youtube iframe {
@@ -672,7 +598,7 @@ select {
 }
 .SpaceX .falcon-div {
   position: fixed;
-  bottom: 500px;
+  bottom: 400px;
   left: 0;
   right: 0;
   height: 100vw;
@@ -703,6 +629,7 @@ select {
   }
 }
 .DarkSkies {
+  opacity: 0;
   margin-bottom: -50px;
 }
 .DarkSkies h3 {
@@ -787,6 +714,9 @@ select {
   }
 }
 
+.ApodGallery {
+  opacity: 0;
+}
 .ApodGallery .apod-flex {
   display: flex;
   flex-wrap: wrap;
@@ -867,6 +797,9 @@ select {
   color: #002fe9;
 }
 
+.ApodVideoGallery {
+  opacity: 0;
+}
 .ApodVideoGallery h1 {
   font-size: 5vw;
 }
@@ -895,6 +828,7 @@ select {
   }
 }
 .FilmAndTv {
+  opacity: 0;
   display: flex;
   flex-direction: column;
 }
