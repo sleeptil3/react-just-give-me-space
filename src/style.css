@@ -51,7 +51,7 @@ h3 {
   font-family: Oswald, Helvetica, sans-serif;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.8rem;
 }
 
 h4 {
@@ -326,7 +326,10 @@ select {
   width: 160px;
   filter: drop-shadow(4px 10px 9px rgba(0, 0, 0, 0.445));
 }
-.App header:hover {
+.App header a {
+  text-decoration: none;
+}
+.App header a:hover {
   color: #f5f5ff;
 }
 .App main {
@@ -338,10 +341,9 @@ select {
   font-size: 1.4rem;
 }
 .App main .NavSlider {
-  opacity: 1;
   position: fixed;
   top: 145px;
-  right: -630px;
+  right: -610px;
   z-index: 1000;
 }
 .App main .NavSlider-container {
@@ -358,14 +360,15 @@ select {
 .App main .NavSlider-container ul {
   list-style: none;
   font-size: 1.5rem;
-  text-shadow: 0.5px 0.5px 2px black;
   margin-left: 1rem;
   margin-right: 1rem;
+  text-shadow: 1.5px 1.5px 1px black;
 }
 .App main .NavSlider-container ul a, .App main .NavSlider-container ul a:visited {
   color: #f5f5ff;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.2s;
 }
 .App main .NavSlider-container ul a li, .App main .NavSlider-container ul a:visited li {
   display: inline;
@@ -373,10 +376,7 @@ select {
   text-decoration: none;
 }
 .App main .NavSlider-container ul a:hover {
-  text-decoration: underline;
-}
-.App main .NavSlider-container ul a:active {
-  text-decoration: underline;
+  text-decoration-line: overline;
 }
 .App main .nav-icon {
   font-size: 3rem;
@@ -415,10 +415,6 @@ select {
     width: 90%;
     margin-top: 3rem;
   }
-  .App .NavSlider {
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
   .App .NavSlider .NavSlider-container {
     position: fixed;
     z-index: 1000;
@@ -430,9 +426,8 @@ select {
     height: 3rem;
     top: 89px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    transition: unset;
   }
   .App .NavSlider .NavSlider-container .nav-icon {
     display: none;
@@ -440,15 +435,13 @@ select {
   .App .NavSlider .NavSlider-container ul {
     font-size: 2.5vw;
   }
+  .App .NavSlider .NavSlider-container ul a:hover {
+    font-size: unset;
+    text-decoration: underline;
+  }
   .App .NavSlider .NavSlider-container ul li {
     padding: 2rem 0;
-    margin: 0 2vw;
-    text-decoration: none;
-  }
-  .App .NavSlider .NavSlider-container ul li a, .App .NavSlider .NavSlider-container ul li a:visited {
-    color: #f5f5ff;
-    text-decoration: none;
-    font-weight: 600;
+    margin: 0 1vw;
   }
   .App .NavSlider .NavSlider-container ul li a:hover {
     text-decoration: underline;
@@ -497,7 +490,7 @@ select {
   font-size: inherit;
 }
 .Home .quote {
-  margin-top: -3rem;
+  margin-top: 0;
   padding-left: 2rem;
   display: flex;
   flex-direction: row;
@@ -549,6 +542,8 @@ select {
 .SpaceX {
   opacity: 0;
   margin-right: 140px;
+  display: flex;
+  flex-direction: column;
 }
 .SpaceX .youtube iframe {
   width: 62vw;
@@ -622,13 +617,12 @@ select {
     height: calc(70vw/1.777777777778);
   }
   .SpaceX .falcon-div {
-    bottom: 225px;
-  }
-  .SpaceX .UpcomingLaunches .launches-div .falcon-div {
-    background-color: red;
+    bottom: 170px;
   }
 }
 .DarkSkies {
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   margin-bottom: -50px;
 }
@@ -653,7 +647,7 @@ select {
 .DarkSkies .SkyStats {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 .DarkSkies .SkyStats div {
@@ -662,6 +656,7 @@ select {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem;
 }
 .DarkSkies .SkyStats div div {
   width: 75%;
@@ -679,6 +674,7 @@ select {
 .DarkSkies .SkyStats div div h4 {
   font-size: 1.5vw;
 }
+
 @media screen and (max-width: 600px) {
   .DarkSkies .render-div {
     width: 100%;
@@ -713,7 +709,6 @@ select {
     margin-top: 2rem;
   }
 }
-
 .ApodGallery {
   opacity: 0;
 }
@@ -724,7 +719,7 @@ select {
   align-content: flex-start;
   padding-top: 2rem;
 }
-.ApodGallery .apod-flex .tile-div {
+.ApodGallery .tile-div {
   text-align: center;
   margin: 1rem;
   width: 300px;
@@ -734,18 +729,18 @@ select {
   align-items: center;
   background-color: #000000;
 }
-.ApodGallery .apod-flex .tile-div h4 {
+.ApodGallery .tile-div h4 {
   padding: 1rem;
   padding-bottom: 2rem;
   bottom: 6px;
 }
-.ApodGallery .apod-flex .tile-div .tile-link {
+.ApodGallery .tile-link {
   margin: 1rem;
   height: 200px;
   cursor: pointer;
   object-fit: cover;
 }
-.ApodGallery .apod-flex .tile-div .tile-link .tile-img {
+.ApodGallery .tile-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -757,14 +752,16 @@ select {
   border: 2px solid #f5f5ff;
   background-color: #000000;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 .ApodGallery .ApodModal h1 {
-  padding: 3rem;
+  margin: 0;
+  padding: 0;
 }
 .ApodGallery .ApodModal img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  margin: 0 auto;
+  width: 90%;
 }
 .ApodGallery .ApodModal p {
   font-size: 1.4rem;
@@ -781,27 +778,50 @@ select {
 .ApodGallery .ApodModal #download:hover {
   color: #002fe9;
 }
-.ApodGallery .ApodModal .modal-title-div {
-  font-size: 4rem;
-  border-radius: 10%;
+.ApodGallery .modal-title-div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.ApodGallery .ApodModal .modal-title-div .close {
+.ApodGallery .close {
   color: #f5f5ff;
   cursor: pointer;
-  margin-left: 40px;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.ApodGallery .ApodModal .modal-title-div .close:hover {
+.ApodGallery .close:hover {
   color: #002fe9;
 }
+.ApodGallery .close-icon {
+  font-size: 4rem;
+}
 
+@media screen and (max-width: 600px) {
+  .ApodGallery h1 {
+    font-size: 6vw;
+  }
+  .ApodGallery .ApodModal {
+    max-height: 55vh;
+    margin: 15% auto;
+    width: 95%;
+  }
+  .ApodGallery .ApodModal img {
+    width: 90%;
+  }
+  .ApodGallery .close {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem;
+  }
+  .ApodGallery .close-icon {
+    font-size: 3rem;
+  }
+}
 .ApodVideoGallery {
   opacity: 0;
-}
-.ApodVideoGallery h1 {
-  font-size: 5vw;
 }
 .ApodVideoGallery p {
   margin-bottom: 2rem;
@@ -811,20 +831,36 @@ select {
   flex-direction: column;
   align-items: center;
 }
-.ApodVideoGallery .apod-video-flex .tile-video-div {
+.ApodVideoGallery .tile-video-div {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4rem;
   border: 1px solid white;
   background-color: black;
   text-align: center;
 }
-.ApodVideoGallery .apod-video-flex .tile-video-div iframe {
+.ApodVideoGallery .tile-video-div iframe {
   width: 65vw;
   height: calc(65vw / 1.777777777778);
 }
+.ApodVideoGallery .tile-video-div h3 {
+  padding-bottom: 1rem;
+  margin: 1rem;
+}
+
 @media screen and (max-width: 600px) {
-  .ApodVideoGallery .apod-video-flex .tile-video-div iframe {
+  .ApodVideoGallery h1 {
+    margin-bottom: 0;
+  }
+  .ApodVideoGallery .tile-video-div {
+    border: none;
+  }
+  .ApodVideoGallery .tile-video-div iframe {
     width: 100vw;
     height: calc(100vw / 1.777777777778);
+  }
+  .ApodVideoGallery .tile-video-div h3 {
+    font-size: 1.8rem;
   }
 }
 .FilmAndTv {
@@ -841,22 +877,21 @@ select {
 .FilmAndTv .films-div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
   justify-content: center;
   width: 95%;
   gap: 0;
   margin: 0 auto;
 }
-.FilmAndTv .films-div .FilmTile {
+.FilmAndTv .FilmTile {
   margin-bottom: 4rem;
 }
-.FilmAndTv .films-div .FilmTile img {
-  width: 200px;
+.FilmAndTv .FilmTile img {
+  width: 15vw;
   margin: 2rem 7rem;
 }
-.FilmAndTv .films-div .FilmTile h1 {
+.FilmAndTv .FilmTile h1 {
   font-size: 1.8rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }
@@ -864,15 +899,34 @@ select {
   .FilmAndTv .films-div {
     grid-template-columns: repeat(3, 1fr);
   }
+  .FilmAndTv .films-div img {
+    width: 20vw;
+  }
 }
 @media screen and (max-width: 1000px) {
   .FilmAndTv .films-div {
     grid-template-columns: repeat(2, 1fr);
   }
+  .FilmAndTv .films-div img {
+    width: 25vw;
+  }
 }
 @media screen and (max-width: 600px) {
   .FilmAndTv .films-div {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .FilmAndTv .FilmTile {
+    margin-bottom: 4rem;
+  }
+  .FilmAndTv .FilmTile img {
+    width: 70vw;
+    margin-top: 2rem;
+  }
+  .FilmAndTv .FilmTile h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 }
 .FilmAndTv #tv-home {

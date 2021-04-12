@@ -18,12 +18,12 @@ export default function NavSlider() {
 	return (
 		<motion.div
 			className='NavSlider'
-			animate={{ right: [null, '-570px', '-505px', '-570px'] }}
+			animate={{ right: [null, '-550px', '-480px', '-550px'] }}
 			transition={{ ease: `easeOut`, duration: 2, times: [0, .6, .7, 1], delay: 3.5 }}
 		>
 			<motion.div
 				className='NavSlider-container'
-				whileHover={{ right: '570px' }}
+				whileHover={{ right: '550px' }}
 				transition={{ ease: `easeOut`, duration: .2 }}
 				onHoverStart={() => controls.start({ transform: 'rotate(0deg)' })}
 				onHoverEnd={() => controls.start({ transform: 'rotate(180deg)' })}

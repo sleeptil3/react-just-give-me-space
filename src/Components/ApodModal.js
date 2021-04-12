@@ -10,7 +10,9 @@ export default function ApodModal(props) {
 		return (
 			<div className='ApodModal center fadeIn1' >
 				<div className='modal-title-div' onClick={props.handleClick}>
-					<FaWindowClose className='close' />
+					<div className='close'>
+						<FaWindowClose className='close-icon' />
+					</div>
 					<h1>{props.data.title}</h1>
 				</div>
 				<img src={props.data.url} alt={props.data.title} />

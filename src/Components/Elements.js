@@ -15,17 +15,19 @@ export function Saturn() {
 }
 export function Header() {
 	return (
-		<Link to='/' className='header'>
-			<motion.header animate={{ top: '0px' }} transition={{ ease: "easeOut", duration: 2 }}>
+
+		<motion.header animate={{ top: '0px' }} transition={{ ease: "easeOut", duration: 2 }}>
+			<Link to='/' className='header'>
 				<div className='header-div'>
 					<div>
 						<h1 className='site-heading'>just give me <span className='space'>SPACE</span></h1>
 						<p className='site-sub'>A Website for <span className='nerds'>Space Nerds</span></p>
 					</div>
 				</div>
-				<Saturn />
-			</motion.header>
-		</Link>
+			</Link>
+			<Saturn />
+		</motion.header>
+
 	)
 }
 export function Stars() {

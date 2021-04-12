@@ -25,7 +25,7 @@ export const navData = [
 		class: 'nav-item'
 	},
 	{
-		name: 'Film And TV',
+		name: 'Film & TV',
 		path: '/filmandtv',
 		class: 'nav-item'
 	},

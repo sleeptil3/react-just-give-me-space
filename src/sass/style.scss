@@ -79,11 +79,15 @@
 			width: 160px;
 			filter: drop-shadow( 4px 10px 9px rgba(0, 0, 0, 0.445));
 		}
+		a {
+			text-decoration: none;
+		}
+		a:hover {
+			color: $offwhite;
+		}
 		
 	}
-	header:hover {
-		color: $offwhite;
-	}
+	
 	main {
 		margin: 0 auto;
 		margin-top: 140px;
@@ -92,10 +96,9 @@
 		width: 80%;
 		font-size: $fontsize-body;
 		.NavSlider {
-			opacity: 1;
 			position: fixed;
 			top: 145px;
-			right: -630px;
+			right: -610px;
 			z-index: 1000;
 		}
 		.NavSlider-container {
@@ -111,13 +114,15 @@
 			ul {
 				list-style: none;
 				font-size: 1.5rem;
-				text-shadow: .5px .5px 2px rgb(0, 0, 0);
 				margin-left: 1rem;
 				margin-right: 1rem;
+				text-shadow:1.5px 1.5px 1px black;
 				a, a:visited {
 					color: $color-main;
 					text-decoration: none;
+					// text-decoration-line: none;
 					font-weight: 600;
+					transition: all .2s;
 					li {
 						display: inline;
 						padding: 0 1.5rem;
@@ -125,10 +130,7 @@
 					}
 				}
 				a:hover {
-					text-decoration: underline;
-				}
-				a:active {
-					text-decoration: underline;
+					text-decoration-line:overline ;
 				}
 			}
 		}
@@ -174,8 +176,6 @@
 			margin-top: 3rem;
 		}
 		.NavSlider {
-			opacity: 0;
-			transition: opacity .5s;
 			.NavSlider-container {
 				position: fixed;
 				z-index: 1000;
@@ -187,23 +187,20 @@
 				height: 3rem;
 				top: 89px;
 				display: flex;
-				justify-content: center;
+				justify-content: space-around;
 				align-items: center;
-				transition: unset;
 				.nav-icon {
 						display: none;
 				}
 				ul {
 					font-size: 2.5vw;
+					a:hover {
+						font-size: unset;
+						text-decoration: underline;
+					}
 					li {
 						padding: 2rem 0;
-						margin: 0 2vw;
-						text-decoration: none;
-						a, a:visited {
-							color: $color-main;
-							text-decoration: none;
-							font-weight: 600;
-						}
+						margin: 0 1vw;
 						a:hover {
 							text-decoration: underline;
 						}
@@ -256,7 +253,7 @@
 	align-content: center;
 	font-size: inherit;
 	.quote {
-		margin-top: -3rem;
+		margin-top: 0;
 		padding-left:2rem;
 		display: flex;
 		flex-direction: row;
@@ -310,6 +307,8 @@
 .SpaceX {
 	opacity: 0;
 	margin-right: 140px;
+	display: flex;
+	flex-direction: column;
 	.youtube {
 		iframe {
 			width: 62vw;
@@ -387,44 +386,14 @@
 			}
 		}
 		.falcon-div {
-			bottom: 225px;
-			.falcon {
-			}
-		}
-		.CompanyInfo {
-			a:hover { 
-			}
-			p { 
-			}
-			h2 { 
-			}
-			.youtube {
-			}
-			.info-field {
-			}	
-		}
-		.UpcomingLaunches { 
-			p { 
-			}
-			h2 { 
-			}
-			.launches-div {
-				a, a:visited {
-				}
-				a:hover {
-				}
-				.patch {
-				}
-				.falcon-div {
-					background-color: red;
-					.falcon {
-					}
-				}
-			}
+			bottom: 170px;
 		}
 	}
 }
 .DarkSkies {
+	display: flex;
+	flex-direction: column;
+
 	opacity: 0;
 	margin-bottom: -50px;
 	h3 {
@@ -441,7 +410,6 @@
 	.render-div {
 		display: flex;
 		flex-direction:column;
-		// align-items: center;
 		padding: 2rem;
 		width: 75%;
 		margin: 0 auto;
@@ -449,7 +417,7 @@
 	.SkyStats {
 		display: flex;
 		flex-direction: column;
-		width: 75%;
+		width: 90%;
 		margin: 0 auto;
 		div {
 			margin-top: 1rem;
@@ -457,6 +425,7 @@
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			margin: 0 1rem;
 			div {
 				width: 75%;
 				display: flex;
@@ -475,7 +444,10 @@
 			}
 		}
 	}
-	@media screen and (max-width: 600px) {
+	
+}
+@media screen and (max-width: 600px) {
+	.DarkSkies {
 		.render-div {
 			width: 100%;
 			padding: 0;
@@ -506,7 +478,6 @@
 			}
 			img {
 				margin-top: 2rem;
-
 			}
 		}
 	}
@@ -519,32 +490,32 @@
 		justify-content: space-around;
 		align-content: flex-start;
 		padding-top: 2rem;
-		.tile-div {
-			text-align: center;
-			margin: 1rem;
-			width: 300px;
-			border: 1px solid white;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background-color: $color-background-default;
-			h4 {
-				padding: 1rem;
-				padding-bottom: 2rem;
-				bottom: 6px;
-			}
-			.tile-link {
-				margin: 1rem;
-				height: 200px;
-				cursor: pointer;
-				object-fit: cover;
-				.tile-img {
-					width: 100%;
-					height: 200px;
-					object-fit: cover;
-				}
-			}
+	}
+	.tile-div {
+		text-align: center;
+		margin: 1rem;
+		width: 300px;
+		border: 1px solid white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $color-background-default;
+		h4 {
+			padding: 1rem;
+			padding-bottom: 2rem;
+			bottom: 6px;
 		}
+	}
+	.tile-link {
+		margin: 1rem;
+		height: 200px;
+		cursor: pointer;
+		object-fit: cover;
+	}
+	.tile-img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
 	}
 	.ApodModal {
 		width: 80vw;
@@ -553,13 +524,15 @@
 		border: 2px solid $color-main;
 		background-color: $color-background-default;
 		overflow-y:auto;
+				display: flex;
+		flex-direction: column;
 		h1 {
-			padding: 3rem;
+			margin: 0;
+			padding: 0;
 		}
 		img {
-			width: 100%;
-			height: 400px;
-			object-fit: cover;
+			margin: 0 auto;
+			width: 90%;
 		}
 		p {
 			font-size: 1.4rem;
@@ -576,28 +549,56 @@
 		#download:hover {
 			color: $color-accent;
 		}
-		.modal-title-div {
-			font-size: 4rem;
-			border-radius: 10%;
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			.close {
-				color: $color-main;
-				cursor: pointer;
-				margin-left: 40px;
-			}
+	}
+	.modal-title-div {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.close {
+		color: $color-main;
+		cursor: pointer;
+		width: 8rem;
+		height: 8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-			.close:hover {
-				color: $color-accent;
-			}
+	}
+
+	.close:hover {
+		color: $color-accent;
+	}
+	.close-icon {
+		font-size: 4rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.ApodGallery {
+		h1 {
+			font-size: 6vw;
+		}
+		.ApodModal {
+			max-height: 55vh;
+			margin: 15% auto;
+			width: 95%;
+			img {
+				width: 90%;			}
+		}
+		.close {
+			width: 4rem;
+			height: 4rem;
+			margin: 1rem;
+		}
+		.close-icon {
+			font-size: 3rem;
 		}
 	}
 }
 .ApodVideoGallery {
 	opacity: 0;
 	h1 {
-		font-size: 5vw;
+		// font-size: 4vw;
 	}
 	p {
 		margin-bottom: 2rem;
@@ -606,30 +607,41 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		.tile-video-div {
-			margin-bottom: 4rem;
-			border: 1px solid white;
-			background-color: black;
-			text-align: center;
-			iframe {
-				width: 65vw;
-				height: calc(65vw / 1.777777777778);
-			}
-		}
 	}
-	.button-div {
-
+	.tile-video-div {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+		border: 1px solid white;
+		background-color: black;
+		text-align: center;
+		iframe {
+			width: 65vw;
+			height: calc(65vw / 1.777777777778);
+		}
+		h3 {
+			padding-bottom: 1rem;
+			margin: 1rem;
+		}
 	}
 }
 @media screen and (max-width: 600px) {
 	.ApodVideoGallery {
+		h1 {
+			margin-bottom: 0;
+		}
 		.apod-video-flex {
-			.tile-video-div {
-				iframe {
-					width: 100vw;
-					height: calc(100vw / 1.777777777778);
-				}
+		}
+		.tile-video-div {
+			border: none;
+			iframe {
+				width: 100vw;
+				height: calc(100vw / 1.777777777778);
 			}
+			h3 {
+				font-size: 1.8rem;
+			}
+
 		}
 	}
 }
@@ -646,16 +658,51 @@
 	.films-div {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		justify-items: center;
+		// justify-items: center;
 		justify-content: center;
 		width: 95%;
 		gap: 0;
 		margin: 0 auto;
+	}
+	.FilmTile {
+		margin-bottom: 4rem;
+		img {
+			width: 15vw;
+			margin: 2rem 7rem;
+		}
+		h1 {
+			font-size: 1.8rem;
+			margin: 0 auto;
+			padding: 0;
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: 1320px) {
+		.films-div {
+			grid-template-columns: repeat(3, 1fr);
+			img {
+				width: 20vw;
+			}
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		.films-div {
+			grid-template-columns: repeat(2, 1fr);
+			img {
+				width: 25vw;
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.films-div {
+			grid-template-columns: repeat(1, 1fr);
+		}
 		.FilmTile {
 			margin-bottom: 4rem;
+			// width: 80%;
 			img {
-				width: 200px;
-				margin: 2rem 7rem;
+				width: 70vw;
+				margin-top: 2rem;
 			}
 			h1 {
 				font-size: 1.8rem;
@@ -663,22 +710,6 @@
 				padding: 0;
 				text-align: center;
 			}
-		}
-	}
-	@media screen and (max-width: 1320px) {
-		.films-div {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-	@media screen and (max-width: 1000px) {
-		.films-div {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	@media screen and (max-width: 600px) {
-		
-		.films-div {
-			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 	#tv-home {
