@@ -4,6 +4,11 @@ A Website for Space Nerds
 
 Link: https://space.sleeptil3software.com/
 
+As Carl Sagan once said:
+
+> If you wish to make an apple pie from scratch
+> you must first invent the universe.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and published using `gh-pages`
 
 ![GitHub Logo](/screenshot.png)
