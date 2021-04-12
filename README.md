@@ -9,8 +9,6 @@ As Carl Sagan once said:
 > If you wish to make an apple pie from scratch
 > you must first invent the universe.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and published using `gh-pages`
-
 ![GitHub Logo](/screenshot.png)
 
 ## Summary
@@ -33,3 +31,5 @@ Just Give Me SPACE was a project created for General Assembly. The requirements 
 * React.js with Javascript XML (JSX)
 * Application Program Interface (API)
 * Framer Motion Library
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and published using `gh-pages`
