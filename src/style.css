@@ -344,7 +344,7 @@ select {
 .App main .NavSlider {
   position: fixed;
   top: 145px;
-  right: -610px;
+  right: -100%;
   z-index: 1000;
 }
 .App main .NavSlider-container {
@@ -365,13 +365,15 @@ select {
   margin-right: 1rem;
   text-shadow: 1.5px 1.5px 1px black;
 }
-.App main .NavSlider-container ul a, .App main .NavSlider-container ul a:visited {
+.App main .NavSlider-container ul a,
+.App main .NavSlider-container ul a:visited {
   color: #f5f5ff;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
 }
-.App main .NavSlider-container ul a li, .App main .NavSlider-container ul a:visited li {
+.App main .NavSlider-container ul a li,
+.App main .NavSlider-container ul a:visited li {
   display: inline;
   padding: 0 1.5rem;
   text-decoration: none;
@@ -548,7 +550,7 @@ select {
 }
 .SpaceX .youtube iframe {
   width: 62vw;
-  height: calc(62vw/1.777777777778);
+  height: 34.875vw;
 }
 .SpaceX .info-field {
   font-weight: bold;
@@ -558,7 +560,8 @@ select {
   margin-bottom: 110px;
   margin-top: 2rem;
 }
-.SpaceX .CompanyInfo a, .SpaceX .CompanyInfo a:visited {
+.SpaceX .CompanyInfo a,
+.SpaceX .CompanyInfo a:visited {
   color: #002fe9;
   text-decoration: none;
 }
@@ -581,7 +584,8 @@ select {
 .SpaceX .UpcomingLaunches .launches-div {
   padding: 2rem 3rem;
 }
-.SpaceX .UpcomingLaunches .launches-div a, .SpaceX .UpcomingLaunches .launches-div a:visited {
+.SpaceX .UpcomingLaunches .launches-div a,
+.SpaceX .UpcomingLaunches .launches-div a:visited {
   color: #f5f5ff;
   text-decoration: none;
 }
@@ -615,7 +619,7 @@ select {
   }
   .SpaceX .youtube iframe {
     width: 70vw;
-    height: calc(70vw/1.777777777778);
+    height: 39.375vw;
   }
   .SpaceX .falcon-div {
     bottom: 170px;
@@ -664,7 +668,8 @@ select {
   display: flex;
   flex-direction: column;
 }
-.DarkSkies .SkyStats div div h3, .DarkSkies .SkyStats div div h4 {
+.DarkSkies .SkyStats div div h3,
+.DarkSkies .SkyStats div div h4 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -694,7 +699,8 @@ select {
     display: flex;
     flex-direction: column;
   }
-  .DarkSkies .SkyStats div div h3, .DarkSkies .SkyStats div div h4 {
+  .DarkSkies .SkyStats div div h3,
+.DarkSkies .SkyStats div div h4 {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -842,7 +848,7 @@ select {
 }
 .ApodVideoGallery .tile-video-div iframe {
   width: 65vw;
-  height: calc(65vw / 1.777777777778);
+  height: 36.5625vw;
 }
 .ApodVideoGallery .tile-video-div h3 {
   padding-bottom: 1rem;
@@ -858,7 +864,7 @@ select {
   }
   .ApodVideoGallery .tile-video-div iframe {
     width: 100vw;
-    height: calc(100vw / 1.777777777778);
+    height: 56.25vw;
   }
   .ApodVideoGallery .tile-video-div h3 {
     font-size: 1.8rem;
