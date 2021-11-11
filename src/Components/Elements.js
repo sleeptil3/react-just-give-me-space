@@ -15,7 +15,6 @@ export function Saturn() {
 }
 export function Header() {
 	return (
-
 		<motion.header animate={{ top: '0px' }} transition={{ ease: "easeOut", duration: 2 }}>
 			<Link to='/' className='header'>
 				<div className='header-div'>
@@ -27,7 +26,6 @@ export function Header() {
 			</Link>
 			<Saturn />
 		</motion.header>
-
 	)
 }
 export function Stars() {
